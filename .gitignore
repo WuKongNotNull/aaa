@@ -7,6 +7,10 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+
+# ignore  .DS_Store
+.DS_Store
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -33,9 +37,6 @@ coverage
 bower_components
 
 # node-waf configuration
-
-
-.DS_Store
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
