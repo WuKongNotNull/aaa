@@ -1,0 +1,1710 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Security 权限认证 · 悟空非空也 - SpringBoot 快速入门</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="悟空非空也">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../shiro/shiro.html" />
+    
+    
+    <link rel="prev" href="authentication.html" />
+    
+
+    <link href="https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/rss" title="悟空非空也 - springboot 快速入门" rel="alternate" type="application/rss+xml" />
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"WuKongNotNull","repo":"spring-boot-quickstart-wukongnote","type":"star","size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href="asset/wukong-favicon.ico" type="image/x-icon">
+    
+    
+    
+    
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-precomposed-152.png">
+    
+    
+        
+    
+    
+        
+    
+
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/WuKongNotNull/awesome-free-vpn" target="_blank" class="custom-link">科学上网</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://www.bilibili.com/read/cv11463068" target="_blank" class="custom-link">JetBrains 全家桶</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    首页 - Spring Boot 青铜篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../introduction/introduction.html">
+            
+                <a href="../introduction/introduction.html">
+            
+                    
+                    开发入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../introduction/initialzr-build.html">
+            
+                <a href="../introduction/initialzr-build.html">
+            
+                    
+                    Spring Initialzr 构建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../introduction/modify-banner.html">
+            
+                <a href="../introduction/modify-banner.html">
+            
+                    
+                    启动图标设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../introduction/unit-test.html">
+            
+                <a href="../introduction/unit-test.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../introduction/hot-deploy.html">
+            
+                <a href="../introduction/hot-deploy.html">
+            
+                    
+                    热部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../introduction/dependency-management.html">
+            
+                <a href="../introduction/dependency-management.html">
+            
+                    
+                    依赖管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../introduction/auto-config.html">
+            
+                <a href="../introduction/auto-config.html">
+            
+                    
+                    自动配置 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../introduction/execute-flow.html">
+            
+                <a href="../introduction/execute-flow.html">
+            
+                    
+                    执行流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../config-annotation/config-annotation.html">
+            
+                <a href="../config-annotation/config-annotation.html">
+            
+                    
+                    核心配置与注解
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../config-annotation/default-log.html">
+            
+                <a href="../config-annotation/default-log.html">
+            
+                    
+                    default-log.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../config-annotation/application-config.html">
+            
+                <a href="../config-annotation/application-config.html">
+            
+                    
+                    application 配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../config-annotation/inject-property.html">
+            
+                <a href="../config-annotation/inject-property.html">
+            
+                    
+                    属性注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../config-annotation/custom-config.html">
+            
+                <a href="../config-annotation/custom-config.html">
+            
+                    
+                    自定义配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../config-annotation/profile-config.html">
+            
+                <a href="../config-annotation/profile-config.html">
+            
+                    
+                    profile 文件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../config-annotation/property-reference.html">
+            
+                <a href="../config-annotation/property-reference.html">
+            
+                    
+                    yml 高级玩法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../data-access/data-access.html">
+            
+                <a href="../data-access/data-access.html">
+            
+                    
+                    数据访问
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../data-access/env-setup.html">
+            
+                <a href="../data-access/env-setup.html">
+            
+                    
+                    环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../data-access/integrate-mybatis.html">
+            
+                <a href="../data-access/integrate-mybatis.html">
+            
+                    
+                    整合 MyBatis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../data-access/integrate-jpa.html">
+            
+                <a href="../data-access/integrate-jpa.html">
+            
+                    
+                    整合 JPA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../data-access/integrate-redis.html">
+            
+                <a href="../data-access/integrate-redis.html">
+            
+                    
+                    整合 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../transaction-management/transaction-management.html">
+            
+                <a href="../transaction-management/transaction-management.html">
+            
+                    
+                    事务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../view-tech/view-tech.html">
+            
+                <a href="../view-tech/view-tech.html">
+            
+                    
+                    支持视图技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../view-tech/static-resource.html">
+            
+                <a href="../view-tech/static-resource.html">
+            
+                    
+                    访问静态资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../view-tech/thymeleaf.html">
+            
+                <a href="../view-tech/thymeleaf.html">
+            
+                    
+                    整合 thymeleaf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../view-tech/freemarker.html">
+            
+                <a href="../view-tech/freemarker.html">
+            
+                    
+                    整合 freemarker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../web-dev/web-dev.html">
+            
+                <a href="../web-dev/web-dev.html">
+            
+                    
+                    实现 Web 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../web-dev/integrate-mvc.html">
+            
+                <a href="../web-dev/integrate-mvc.html">
+            
+                    
+                    整合 MVC 和拦截器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../web-dev/mvc-validation.html">
+            
+                <a href="../web-dev/mvc-validation.html">
+            
+                    
+                    数据校验 Validation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../web-dev/global-exception.html">
+            
+                <a href="../web-dev/global-exception.html">
+            
+                    
+                    全局异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../web-dev/integrate-servlet.html">
+            
+                <a href="../web-dev/integrate-servlet.html">
+            
+                    
+                    整合 Servlet Filter Listener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.5" data-path="../web-dev/file-upload.html">
+            
+                <a href="../web-dev/file-upload.html">
+            
+                    
+                    文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6" data-path="../web-dev/file-download.html">
+            
+                <a href="../web-dev/file-download.html">
+            
+                    
+                    文件下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.7" data-path="../web-dev/jar-package.html">
+            
+                <a href="../web-dev/jar-package.html">
+            
+                    
+                    jar 打包部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.8" data-path="../web-dev/war-package.html">
+            
+                <a href="../web-dev/war-package.html">
+            
+                    
+                    war 打包部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../fore-end-separation/fore-end-separation.html">
+            
+                <a href="../fore-end-separation/fore-end-separation.html">
+            
+                    
+                    前后端分离
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" >
+            
+                <span>
+            
+                    
+                    postman
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" >
+            
+                <span>
+            
+                    
+                    restfull 风格接口设计
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" >
+            
+                <span>
+            
+                    
+                    统一响应结果
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../fore-end-separation/cors.html">
+            
+                <a href="../fore-end-separation/cors.html">
+            
+                    
+                    CORS 跨域处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5" data-path="../fore-end-separation/token-login.html">
+            
+                <a href="../fore-end-separation/token-login.html">
+            
+                    
+                    token-login.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.6" data-path="../fore-end-separation/token-authorization.html">
+            
+                <a href="../fore-end-separation/token-authorization.html">
+            
+                    
+                    token-authorization.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.7" data-path="../fore-end-separation/user-management.html">
+            
+                <a href="../fore-end-separation/user-management.html">
+            
+                    
+                    用户管理 CRUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../Integrated-swagger/integrated-swagger.html">
+            
+                <a href="../Integrated-swagger/integrated-swagger.html">
+            
+                    
+                    Swagger Api文档管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../cache-management/cache-management.html">
+            
+                <a href="../cache-management/cache-management.html">
+            
+                    
+                    缓存管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../cache-management/env-setup.html">
+            
+                <a href="../cache-management/env-setup.html">
+            
+                    
+                    基础环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../cache-management/default-cache.html">
+            
+                <a href="../cache-management/default-cache.html">
+            
+                    
+                    默认缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../cache-management/integrate-redis.html">
+            
+                <a href="../cache-management/integrate-redis.html">
+            
+                    
+                    redis 缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.4" data-path="../cache-management/integrate-ehcache.html">
+            
+                <a href="../cache-management/integrate-ehcache.html">
+            
+                    
+                    整合 ehcache
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="security-management.html">
+            
+                <a href="security-management.html">
+            
+                    
+                    安全管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Security 身份认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="11.1.2" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Security 权限认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.3" data-path="../shiro/shiro.html">
+            
+                <a href="../shiro/shiro.html">
+            
+                    
+                    shiro 安全管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../message-service/message-service.html">
+            
+                <a href="../message-service/message-service.html">
+            
+                    
+                    消息服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1.1" data-path="../message-service/rabbitMQ.html">
+            
+                <a href="../message-service/rabbitMQ.html">
+            
+                    
+                    rabbitMQ 消息中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../task-management/task-management.html">
+            
+                <a href="../task-management/task-management.html">
+            
+                    
+                    任务管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="13.1.1" data-path="../task-management/asynch-call.html">
+            
+                <a href="../task-management/asynch-call.html">
+            
+                    
+                    异步调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.1.2" data-path="../task-management/timed-task.html">
+            
+                <a href="../task-management/timed-task.html">
+            
+                    
+                    定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.1.3" data-path="../task-management/send-email.html">
+            
+                <a href="../task-management/send-email.html">
+            
+                    
+                    发送邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.1.4" data-path="../task-management/integrate-quartz .html">
+            
+                <a href="../task-management/integrate-quartz .html">
+            
+                    
+                    整合 Quartz 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../integrated-project/integrated-project.html">
+            
+                <a href="../integrated-project/integrated-project.html">
+            
+                    
+                    综合项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+
+    
+    <li>
+        
+        
+        
+            
+        
+        
+            <a href="http://www.beian.miit.gov.cn/" target="blank" class="gitbook-link">
+                苏ICP备2021034291号
+            </a>
+        
+    </li>
+    
+</ul>
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Security 权限认证</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x609F;&#x7A7A;&#x7F16;&#x53F7;"><b>1.1. </b>&#x609F;&#x7A7A;&#x7F16;&#x53F7;</a></li><li><span class="title-icon "></span><a href="#&#x5B66;&#x524D;&#x7D20;&#x6750;&#x51C6;&#x5907;"><b>1.2. </b>&#x5B66;&#x524D;&#x7D20;&#x6750;&#x51C6;&#x5907;</a></li><li><span class="title-icon "></span><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x63A7;&#x5236;"><b>1.3. </b>&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x63A7;&#x5236;</a></li><li><span class="title-icon "></span><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x767B;&#x5F55;&#x9875;&#x9762;"><b>1.4. </b>&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x767B;&#x5F55;&#x9875;&#x9762;</a></li><li><span class="title-icon "></span><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x9000;&#x51FA;"><b>1.5. </b>&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x9000;&#x51FA;</a></li><li><span class="title-icon "></span><a href="#&#x767B;&#x5F55;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x83B7;&#x53D6;"><b>1.6. </b>&#x767B;&#x5F55;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x83B7;&#x53D6;</a></li><li><span class="title-icon "></span><a href="#&#x8BB0;&#x5F97;&#x6211;&#x529F;&#x80FD;"><b>1.7. </b>&#x8BB0;&#x5F97;&#x6211;&#x529F;&#x80FD;</a></li><li><span class="title-icon "></span><a href="#csrf&#x9632;&#x62A4;&#x529F;&#x80FD;"><b>1.8. </b>CSRF&#x9632;&#x62A4;&#x529F;&#x80FD;</a></li><li><span class="title-icon "></span><a href="#security-&#x7BA1;&#x7406;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x5448;&#x73B0;"><b>1.9. </b>Security &#x7BA1;&#x7406;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x5448;&#x73B0;</a></li><li><span class="title-icon "></span><a href="#&#x6E90;&#x7801;&#x5F52;&#x6863;"><b>1.10. </b>&#x6E90;&#x7801;&#x5F52;&#x6863;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x609F;&#x7A7A;&#x7F16;&#x53F7;"><a name="&#x609F;&#x7A7A;&#x7F16;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x609F;&#x7A7A;&#x7F16;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x609F;&#x7A7A;&#x7F16;&#x53F7;</h2>
+<p><br></p>
+<h2 id="&#x5B66;&#x524D;&#x7D20;&#x6750;&#x51C6;&#x5907;"><a name="&#x5B66;&#x524D;&#x7D20;&#x6750;&#x51C6;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x5B66;&#x524D;&#x7D20;&#x6750;&#x51C6;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x5B66;&#x524D;&#x7D20;&#x6750;&#x51C6;&#x5907;</h2>
+<blockquote>
+<p>&#x524D;&#x7AEF;&#x8D44;&#x6E90;&#xFF08;html css js image &#x7B49;&#x7B49;&#xFF09;</p>
+<p>&#x94FE;&#x63A5;&#xFF1A;<a href="https://share.weiyun.com/QD9u6jjX" target="_blank">https://share.weiyun.com/QD9u6jjX</a> &#x5BC6;&#x7801;&#xFF1A;wukong</p>
+</blockquote>
+<p><br></p>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x63A7;&#x5236;"><a name="&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x63A7;&#x5236;</h2>
+<blockquote>
+<ul>
+<li>&#x8BBF;&#x95EE;&#x9996;&#x9875;&#x6388;&#x6743;  index.html</li>
+<li>&#x8BBF;&#x95EE;&#x9759;&#x6001;&#x8D44;&#x6E90;&#xFF08;&#x56FE;&#x7247;&#x548C;&#x6837;&#x5F0F;&#xFF09;&#x6388;&#x6743;</li>
+</ul>
+</blockquote>
+<p><br></p>
+<pre><code class="lang-java"><span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(HttpSecurity http)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        <span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x6388;&#x6743;&#x7BA1;&#x7406;</span>
+        http.authorizeRequests()
+                 <span class="hljs-comment">// &#x6240;&#x6709;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;</span>
+                .antMatchers(<span class="hljs-string">&quot;/&quot;</span>).permitAll()
+                <span class="hljs-comment">// &#x9700;&#x8981;&#x5BF9;static&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x9759;&#x6001;&#x8D44;&#x6E90;&#xFF08;&#x56FE;&#x7247;&#x548C;&#x6837;&#x5F0F;&#xFF09;&#x8FDB;&#x884C;&#x7EDF;&#x4E00;&#x653E;&#x884C;</span>
+                .antMatchers(<span class="hljs-string">&quot;/login/**&quot;</span>).permitAll()
+                      <span class="hljs-comment">// &#x8BBF;&#x95EE;&#x5982;&#x4E0B;&#x8BF7;&#x6C42;&#x9700;&#x8981; &#x89D2;&#x8272;&#xFF08;&#x6743;&#x9650;&#xFF09;&#x662F; common &#x6216;&#x8005; vip</span>
+                .antMatchers(<span class="hljs-string">&quot;/detail/common/**&quot;</span>).hasAnyRole(<span class="hljs-string">&quot;common&quot;</span>,<span class="hljs-string">&quot;vip&quot;</span>)
+                .antMatchers(<span class="hljs-string">&quot;/detail/vip/**&quot;</span>).hasRole(<span class="hljs-string">&quot;vip&quot;</span>)
+                <span class="hljs-comment">// &#x4EFB;&#x4F55;&#x8BF7;&#x6C42;&#x8BBF;&#x95EE;&#x90FD;&#x9700;&#x8981;&#x5148;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;</span>
+                .anyRequest().authenticated();
+}
+</code></pre>
+<p><br></p>
+<blockquote>
+<p>Spring Security &#x4E2D;&#x7684; hasRole &#x548C; hasAuthority &#x6709;&#x533A;&#x522B;&#x5417;&#xFF1F;</p>
+<p><a href="https://cloud.tencent.com/developer/article/1703187" target="_blank">https://cloud.tencent.com/developer/article/1703187</a></p>
+</blockquote>
+<p><strong>hasRole()</strong></p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> ExpressionInterceptUrlRegistry <span class="hljs-title">hasRole</span><span class="hljs-params">(String role)</span> </span>{
+ <span class="hljs-keyword">return</span> access(ExpressionUrlAuthorizationConfigurer.hasRole(role));
+}
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">hasRole</span><span class="hljs-params">(String role)</span> </span>{
+ Assert.notNull(role, <span class="hljs-string">&quot;role cannot be null&quot;</span>);
+ <span class="hljs-keyword">if</span> (role.startsWith(<span class="hljs-string">&quot;ROLE_&quot;</span>)) {
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(
+    <span class="hljs-string">&quot;role should not start with &apos;ROLE_&apos; since it is automatically inserted. Got &apos;&quot;</span>
+      + role + <span class="hljs-string">&quot;&apos;&quot;</span>);
+ }
+ <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;hasRole(&apos;ROLE_&quot;</span> + role + <span class="hljs-string">&quot;&apos;)&quot;</span>;
+}
+</code></pre>
+<p><br></p>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x767B;&#x5F55;&#x9875;&#x9762;"><a name="&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x767B;&#x5F55;&#x9875;&#x9762;" class="anchor-navigation-ex-anchor" href="#&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x767B;&#x5F55;&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x767B;&#x5F55;&#x9875;&#x9762;</h2>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">xmlns:th</span>=<span class="hljs-string">&quot;http://www.thymeleaf.org&quot;</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;Content-Type&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;text/html; charset=UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>&#x7528;&#x6237;&#x767B;&#x5F55;&#x754C;&#x9762;<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/login/css/bootstrap.min.css}&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/login/css/signin.css}&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/login/css/mycss.css}&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-center&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-signin&quot;</span> <span class="hljs-attr">th:action</span>=<span class="hljs-string">&quot;@{/userLogin}&quot;</span> <span class="hljs-attr">th:method</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mb-4&quot;</span> <span class="hljs-attr">th:src</span>=<span class="hljs-string">&quot;@{/login/img/login.jpg}&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;72px&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;72px&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;h3 mb-3 font-weight-normal&quot;</span>&gt;</span>&#x8BF7;&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x7528;&#x6237;&#x767B;&#x5F55;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x63D0;&#x793A;&#x6846; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">th:if</span>=<span class="hljs-string">&quot;${param.error}&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color: red;height: 40px;text-align: left;font-size: 1.1em&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">th:src</span>=<span class="hljs-string">&quot;@{/login/img/loginError.jpg}&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;20px&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>&#x7528;&#x6237;&#x540D;&#x6216;&#x5BC6;&#x7801;&#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x91CD;&#x65B0;&#x767B;&#x5F55;&#xFF01;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-control&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x7528;&#x6237;&#x540D;&quot;</span> <span class="hljs-attr">required</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">autofocus</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;pwd&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-control&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x5BC6;&#x7801;&quot;</span> <span class="hljs-attr">required</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;checkbox mb-3&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;rememberMe&quot;</span>&gt;</span> &#x8BB0;&#x4F4F;&#x6211;
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-lg btn-primary btn-block&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mt-5 mb-3 text-muted&quot;</span>&gt;</span>Copyright&#xA9; 2050-3030<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p><br></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.wukongnotnull.controller;
+
+<span class="hljs-keyword">import</span> org.springframework.security.core.Authentication;
+<span class="hljs-keyword">import</span> org.springframework.security.core.context.SecurityContext;
+<span class="hljs-keyword">import</span> org.springframework.security.core.context.SecurityContextHolder;
+<span class="hljs-keyword">import</span> org.springframework.security.core.userdetails.UserDetails;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Controller;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.GetMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.ResponseBody;
+
+
+<span class="hljs-comment">//author: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#xFF08;B&#x7AD9;/&#x77E5;&#x4E4E;/&#x516C;&#x4F17;&#x53F7;&#xFF09;</span>
+<span class="hljs-meta">@Controller</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LoginController</span> </span>{
+
+    <span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">&quot;/userLogin&quot;</span>)  <span class="hljs-comment">//&#x8DEF;&#x5F84;&#x8981;&#x548C; &#x63D0;&#x4EA4;&#x767B;&#x5F55;&#x8868;&#x5355;&#x7684;url &#x4E00;&#x81F4;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">index</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;login/login&quot;</span>;
+    }
+
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.wukongnotnull.config;
+
+
+<span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+<span class="hljs-keyword">import</span> javax.sql.DataSource;
+
+
+<span class="hljs-comment">//author: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#xFF08;B&#x7AD9;/&#x77E5;&#x4E4E;/&#x516C;&#x4F17;&#x53F7;&#xFF09;</span>
+<span class="hljs-meta">@EnableWebSecurity</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SecurityConfig</span>  <span class="hljs-keyword">extends</span> <span class="hljs-title">WebSecurityConfigurerAdapter</span> </span>{
+
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(HttpSecurity http)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+        <span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x767B;&#x5F55;&#x63A7;&#x5236;</span>
+        <span class="hljs-comment">// &#x6280;&#x5DE7;&#xFF1A; &#x83B7;&#x5F97;&#x767B;&#x5F55;&#x9875;&#x548C;&#x5904;&#x7406;&#x767B;&#x5F55;&#x4FE1;&#x606F;&#x7684; url &#x90FD;&#x662F; /userLogin , post &#x8BF7;&#x6C42;&#x8FDB;&#x5165;&#x5982;&#x4E0B;&#x65B9;&#x6CD5;</span>
+        http.authorizeRequests().and()
+                      <span class="hljs-comment">// &#x5F00;&#x542F;&#x767B;&#x5F55;&#x529F;&#x80FD;</span>
+                      .formLogin()
+                      <span class="hljs-comment">// &#x8BBF;&#x95EE;&#x767B;&#x5F55;&#x9875;&#x9762;&#xFF08;&#x81EA;&#x5B9A;&#x4E49;&#x767B;&#x5F55;&#x8DEF;&#x5F84;&#xFF09;</span>
+                .loginPage(<span class="hljs-string">&quot;/userLogin&quot;</span>).permitAll()
+                      <span class="hljs-comment">//  &#x6307;&#x5B9A;&#x767B;&#x5F55;&#x5904;&#x7406;&#x7684; url &#xFF0C;&#x5BF9;&#x5E94;action&#x7684;&#x503C;</span>
+                      .loginProcessingUrl(<span class="hljs-string">&quot;/userLogin&quot;</span>)
+                .usernameParameter(<span class="hljs-string">&quot;name&quot;</span>)
+                .passwordParameter(<span class="hljs-string">&quot;pwd&quot;</span>)
+                      <span class="hljs-comment">//     &#x767B;&#x5F55;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x8BBF;&#x95EE;&#x9996;&#x9875; /</span>
+                .defaultSuccessUrl(<span class="hljs-string">&quot;/&quot;</span>)
+                      <span class="hljs-comment">// &#x767B;&#x5F55;&#x5931;&#x8D25;&#x540E;&#xFF0C;&#x8BBF;&#x95EE; /userLogin?error</span>
+                .failureUrl(<span class="hljs-string">&quot;/userLogin?error&quot;</span>);
+
+    }
+
+}
+</code></pre>
+<p><br></p>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x9000;&#x51FA;"><a name="&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x9000;&#x51FA;" class="anchor-navigation-ex-anchor" href="#&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x9000;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x9000;&#x51FA;</h2>
+<pre><code class="lang-java">    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(HttpSecurity http)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+                 <span class="hljs-comment">// &#x9000;&#x51FA;</span>
+        http
+          <span class="hljs-comment">// &#x5F00;&#x542F;&#x9000;&#x51FA;&#x529F;&#x80FD;</span>
+          .logout()
+          <span class="hljs-comment">// &#x8BBF;&#x95EE; /logout &#x6267;&#x884C;&#x9000;&#x51FA;&#x529F;&#x80FD;</span>
+          .logoutUrl(<span class="hljs-string">&quot;/logout&quot;</span>)
+          <span class="hljs-comment">// &#x9000;&#x51FA;&#x6210;&#x529F;&#xFF0C;&#x8BBF;&#x95EE;&#x9996;&#x9875;  / </span>
+          .logoutSuccessUrl(<span class="hljs-string">&quot;/&quot;</span>);
+
+    }
+</code></pre>
+<p><br></p>
+<h2 id="&#x767B;&#x5F55;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x83B7;&#x53D6;"><a name="&#x767B;&#x5F55;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x83B7;&#x53D6;" class="anchor-navigation-ex-anchor" href="#&#x767B;&#x5F55;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x83B7;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x767B;&#x5F55;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x83B7;&#x53D6;</h2>
+<pre><code>    /**
+     *  &#x901A;&#x8FC7; Security &#x63D0;&#x4F9B;&#x7684; SecurityContextHolder &#x83B7;&#x53D6;&#x767B;&#x5F55;&#x7528;&#x6237;&#x4FE1;&#x606F;
+     * @return String
+     */
+    @GetMapping(&quot;/userInfo&quot;)
+    @ResponseBody
+    public String getUser(){
+        // &#x83B7;&#x53D6;&#x5E94;&#x7528;&#x4E0A;&#x4E0B;&#x6587;
+        SecurityContext context = SecurityContextHolder.getContext();
+        // &#x83B7;&#x53D6;&#x7528;&#x6237;&#x76F8;&#x5173;&#x4FE1;&#x606F;
+        Authentication authentication = context.getAuthentication();
+        UserDetails userDetails = (UserDetails)authentication.getPrincipal();
+        System.out.println(&quot;username: &quot;+userDetails.getUsername());
+        return &quot;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x540D;&#x4E3A;&#xFF1A; &quot; + userDetails.getUsername();
+    }
+</code></pre><p><br></p>
+<h2 id="&#x8BB0;&#x5F97;&#x6211;&#x529F;&#x80FD;"><a name="&#x8BB0;&#x5F97;&#x6211;&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#&#x8BB0;&#x5F97;&#x6211;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x8BB0;&#x5F97;&#x6211;&#x529F;&#x80FD;</h2>
+<pre><code>        &lt;div class=&quot;checkbox mb-3&quot;&gt;
+            &lt;label&gt;
+                &lt;input type=&quot;checkbox&quot; name=&quot;rememberMe&quot;&gt; &#x8BB0;&#x4F4F;&#x6211;
+            &lt;/label&gt;
+        &lt;/div&gt;
+</code></pre><pre><code class="lang-mysql">USE springbootdata;
+# &#x6765;&#x6E90;&#x4E8E; JdbcTokenRepositoryImpl 
+create table persistent_logins (username varchar(64) not null, series varchar(64) primary key,
+            token varchar(64) not null, last_used timestamp not null);
+</code></pre>
+<pre><code>        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-jdbc&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+</code></pre><pre><code class="lang-java">    <span class="hljs-comment">// &#x4F7F;&#x7528;jdbc &#x6280;&#x672F;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x5E93; </span>
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-keyword">private</span> DataSource dataSource;
+
+
+   <span class="hljs-comment">/**
+     * &#x6301;&#x4E45;&#x5316;Token&#x5B58;&#x50A8;
+     * <span class="hljs-doctag">@return</span> 
+     */</span>
+    <span class="hljs-meta">@Bean</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> JdbcTokenRepositoryImpl <span class="hljs-title">tokenRepository</span><span class="hljs-params">()</span></span>{
+        JdbcTokenRepositoryImpl jr=<span class="hljs-keyword">new</span> JdbcTokenRepositoryImpl();
+        jr.setDataSource(dataSource);
+        <span class="hljs-keyword">return</span> jr;
+    }
+
+        <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(HttpSecurity http)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+       <span class="hljs-comment">// &#x8BB0;&#x4F4F;&#x6211;</span>
+        http.rememberMe()
+                .rememberMeParameter(<span class="hljs-string">&quot;rememberMe&quot;</span>)
+                .tokenValiditySeconds(<span class="hljs-number">60</span>*<span class="hljs-number">60</span>*<span class="hljs-number">24</span>*<span class="hljs-number">7</span>)
+                .tokenRepository(<span class="hljs-keyword">this</span>.tokenRepository());
+    }
+</code></pre>
+<p><br></p>
+<h2 id="csrf&#x9632;&#x62A4;&#x529F;&#x80FD;"><a name="csrf&#x9632;&#x62A4;&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#csrf&#x9632;&#x62A4;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. CSRF&#x9632;&#x62A4;&#x529F;&#x80FD;</h2>
+<blockquote>
+<p>&#x8DE8;&#x7AD9;&#x4F2A;&#x9020;&#x7528;&#x6237;&#xFF0C;&#x83B7;&#x5F97;&#x771F;&#x5B9E;&#x7528;&#x6237;&#x7684; session &#x4FE1;&#x606F;&#xFF0C;&#x4F2A;&#x9020;&#x6210;&#x771F;&#x5B9E;&#x7528;&#x6237;&#xFF0C;&#x8FDB;&#x884C;&#x975E;&#x6CD5;&#x64CD;&#x4F5C;&#x3002;</p>
+</blockquote>
+<p><br></p>
+<p><strong>form &#x8868;&#x5355;&#x4F7F;&#x7528; csrf &#x9632;&#x62A4;</strong></p>
+<blockquote>
+<pre><code>          &lt;!--csrf &#x9632;&#x62A4;&#xFF1A; &#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x4EE3;&#x7801;--&gt;
+        &lt;input type=&quot;hidden&quot; th:name=&quot;${_csrf.parameterName}&quot; th:value=&quot;${_csrf.token}&quot;/&gt;
+</code></pre></blockquote>
+<pre><code class="lang-html">    <span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">xmlns:th</span>=<span class="hljs-string">&quot;http://www.thymeleaf.org&quot;</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>&#x4FEE;&#x6539;&#x7528;&#x6237;<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/login/css/mycss.css}&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">align</span>=<span class="hljs-string">&quot;center&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">th:action</span>=<span class="hljs-string">&quot;@{/updateUser}&quot;</span>&gt;</span>
+            <span class="hljs-comment">&lt;!--csrf &#x9632;&#x62A4;&#xFF1A; &#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x4EE3;&#x7801;--&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;hidden&quot;</span> <span class="hljs-attr">th:name</span>=<span class="hljs-string">&quot;${_csrf.parameterName}&quot;</span> <span class="hljs-attr">th:value</span>=<span class="hljs-string">&quot;${_csrf.token}&quot;</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>&#x7528;&#x6237;&#x540D;:
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span>/&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>&#x4FEE;&#x6539;&#x7528;&#x6237;&#x540D;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p><br></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.wukongnotnull.controller;
+
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Controller;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.GetMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.PostMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestParam;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.ResponseBody;
+
+<span class="hljs-keyword">import</span> javax.servlet.http.HttpServletRequest;
+
+<span class="hljs-comment">//author: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#xFF08;B&#x7AD9;/&#x77E5;&#x4E4E;/&#x516C;&#x4F17;&#x53F7;&#xFF09;</span>
+<span class="hljs-meta">@Controller</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CSRFController</span> </span>{
+    <span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">&quot;/updateUser&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">updateUser</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;csrf/csrfTest&quot;</span>;
+    }
+
+
+    <span class="hljs-meta">@ResponseBody</span>
+    <span class="hljs-meta">@PostMapping</span>(<span class="hljs-string">&quot;/updateUser&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">updateUser</span><span class="hljs-params">(@RequestParam(<span class="hljs-string">&quot;username&quot;</span>)</span> String username,
+                             HttpServletRequest request
+    )</span>{
+        System.out.println(<span class="hljs-string">&quot;request = &quot;</span> + request);
+
+        String csrf_token=request.getParameter(<span class="hljs-string">&quot;_csrf&quot;</span>);
+        System.out.println(<span class="hljs-string">&quot;csrf_token = &quot;</span> + csrf_token);
+
+        System.out.println(<span class="hljs-string">&quot;username = &quot;</span> + username);
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;success&quot;</span>;
+    }
+}
+</code></pre>
+<p><br></p>
+<p><strong>ajax &#x4F7F;&#x7528; csrf &#x9632;&#x62A4;</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span> //&#x9488;&#x5BF9;ajax&#x6570;&#x636E;&#x4FEE;&#x6539;&#x7684;CSRF Token&#x914D;&#x7F6E;
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;_csrf&quot;</span> <span class="hljs-attr">th:content</span>=<span class="hljs-string">&quot;${_csrf.token}&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;_csrf_header&quot;</span> <span class="hljs-attr">th:content</span>=<span class="hljs-string">&quot;${_csrf.headerName}&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+$(function () {
+    var token = $(&quot;meta[name=&apos;_csrf&apos;]&quot;).attr(&quot;content&quot;);
+    var headerName = $(&quot;meta[name=&apos;_csrf_header&apos;]&quot;).attr(&quot;content&quot;);
+    $(document).ajaxSend(function(e, xhr, options) {
+        xhr.setRequestHeader(headerName, token);
+    });
+});
+</code></pre>
+<h2 id="security-&#x7BA1;&#x7406;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x5448;&#x73B0;"><a name="security-&#x7BA1;&#x7406;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x5448;&#x73B0;" class="anchor-navigation-ex-anchor" href="#security-&#x7BA1;&#x7406;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x5448;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. Security &#x7BA1;&#x7406;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x5448;&#x73B0;</h2>
+<blockquote>
+<p>&#x4E0D;&#x540C;&#x6743;&#x9650;&#xFF0C;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x9488;&#x5BF9;&#x6027;&#x5448;&#x73B0;&#x4E0D;&#x540C;&#x7684;&#x5185;&#x5BB9;</p>
+<p>&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF1A; &#x52A8;&#x6001;&#x83DC;&#x5355;&#x7684;&#x5B9E;&#x73B0;</p>
+</blockquote>
+<pre><code>       &lt;!--&#x4F7F; thymeLeaf &#x4E0A;&#x7684;&#x6743;&#x9650;&#x5C5E;&#x6027;&#x751F;&#x6548;--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.thymeleaf.extras&lt;/groupId&gt;
+            &lt;artifactId&gt;thymeleaf-extras-springsecurity5&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+</code></pre><blockquote>
+<p><strong>(1)sec:authorize=&quot;isAuthenticated()&quot;</strong></p>
+<p><strong>&#x5224;&#x65AD;&#x7528;&#x6237;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x767B;&#x9646;&#x8BA4;&#x8BC1;&#xFF0C;&#x5F15;&#x53F7;&#x5185;&#x7684;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x662F;isAuthenticated()&#x3002;</strong></p>
+<p><strong>(2)sec:authentication=&#x201C;name&#x201D;</strong></p>
+<p><strong>&#x83B7;&#x5F97;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x7528;&#x6237;&#x540D;&#xFF0C;&#x5F15;&#x53F7;&#x5185;&#x7684;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x662F;name&#x3002;</strong></p>
+<p><strong>(3)sec:authorize=&#x201C;hasRole(&#x2018;role&#x2019;)&#x201D;</strong></p>
+<p><strong>&#x5224;&#x65AD;&#x5F53;&#x524D;&#x7528;&#x6237;&#x662F;&#x5426;&#x62E5;&#x6709;&#x6307;&#x5B9A;&#x7684;&#x6743;&#x9650;&#x3002;&#x5F15;&#x53F7;&#x5185;&#x7684;&#x53C2;&#x6570;&#x4E3A;&#x6743;&#x9650;&#x7684;&#x540D;&#x79F0;&#x3002;</strong></p>
+<p><strong>(4)sec:authentication=&quot;principal.authorities&quot;</strong></p>
+<p><strong>&#x83B7;&#x5F97;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x5168;&#x90E8;&#x89D2;&#x8272;&#xFF0C;&#x5F15;&#x53F7;&#x5185;&#x7684;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x662F;principal.authorities&#x3002;</strong></p>
+</blockquote>
+<p><br></p>
+<p><strong>index.html</strong></p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>
+        <span class="hljs-attr">xmlns:th</span>=<span class="hljs-string">&quot;http://www.thymeleaf.org&quot;</span>
+        <span class="hljs-attr">xmlns:sec</span>=<span class="hljs-string">&quot;http://www.thymeleaf.org/thymeleaf-extras-springsecurity5&quot;</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;Content-Type&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;text/html; charset=UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>&#x65B0;&#x6D6A;&#x65B0;&#x95FB;&#x5E73;&#x53F0;<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/login/css/mycss.css}&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>&#x6B22;&#x8FCE;&#x65B0;&#x6D6A;&#x65B0;&#x95FB;&#x9996;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">sec:authorize</span>=<span class="hljs-string">&quot;isAnonymous()&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x6E38;&#x5BA2;&#x60A8;&#x597D;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x67E5;&#x770B;<span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>&#x4F1A;&#x5458;&#x65B0;&#x95FB;<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/userLogin}&quot;</span>&gt;</span>&#x8BF7;&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">sec:authorize</span>=<span class="hljs-string">&quot;isAuthenticated()&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>
+        &#x7528;&#x6237;: <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">sec:authentication</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color: #0e69cb&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+        &#x60A8;&#x7684;&#x6743;&#x9650;&#xFF1A;<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">sec:authentication</span>=<span class="hljs-string">&quot;principal.authorities&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color:#66c256&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>&#xFF0C;&#x60A8;&#x6709;&#x6743;&#x89C2;&#x770B;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">th:action</span>=<span class="hljs-string">&quot;@{/logout}&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">th:type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">th:value</span>=<span class="hljs-string">&quot;&#x6CE8;&#x9500;&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>&#x6E38;&#x5BA2; - &#x65B0;&#x95FB;&#x4E13;&#x680F;<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/detail/visitor/1}&quot;</span>&gt;</span>&#x65B0;&#x95FB;1&#xFF1A;&#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#x5E26;&#x4F60;&#x5B66;&#x4E60; Java <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/detail/visitor/2}&quot;</span>&gt;</span>&#x65B0;&#x95FB;2&#xFF1A;&#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#x5E26;&#x4F60;&#x5B66;&#x4E60; Python <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/detail/visitor/3}&quot;</span>&gt;</span>&#x65B0;&#x95FB;3&#xFF1A;&#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#x5E26;&#x4F60;&#x5B66;&#x4E60; C++ <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--&lt;div sec:authorize=&quot;hasRole(&apos;common&apos;)&quot;&gt;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">sec:authorize</span>=<span class="hljs-string">&quot;hasRole(&apos;common&apos;) || hasRole(&apos;vip&apos;)&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>&#x666E;&#x901A;&#x4F1A;&#x5458; - &#x65B0;&#x95FB;&#x4E13;&#x680F;<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/detail/common/1}&quot;</span>&gt;</span>&#x666E;&#x901A;&#x4F1A;&#x5458;&#x65B0;&#x95FB;&#xFF1A;1 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/detail/common/2}&quot;</span>&gt;</span>&#x666E;&#x901A;&#x4F1A;&#x5458;&#x65B0;&#x95FB;&#xFF1A;2 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--&lt;div sec:authorize=&quot;hasAuthority(&apos;ROLE_vip&apos;)&quot;&gt;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">sec:authorize</span>=<span class="hljs-string">&quot;hasRole(&apos;vip&apos;)&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>VIP&#x4F1A;&#x5458; - &#x4E13;&#x4EAB;&#x4E13;&#x680F;<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/detail/vip/1}&quot;</span>&gt;</span>vip&#x4F1A;&#x5458;&#x65B0;&#x95FB;&#xFF1A;1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">th:href</span>=<span class="hljs-string">&quot;@{/detail/vip/2}&quot;</span>&gt;</span>vip&#x4F1A;&#x5458;&#x65B0;&#x95FB;&#xFF1A;2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p><br></p>
+<h2 id="&#x6E90;&#x7801;&#x5F52;&#x6863;"><a name="&#x6E90;&#x7801;&#x5F52;&#x6863;" class="anchor-navigation-ex-anchor" href="#&#x6E90;&#x7801;&#x5F52;&#x6863;"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. &#x6E90;&#x7801;&#x5F52;&#x6863;</h2>
+<blockquote>
+<p>&#x5F52;&#x6863;&#x94FE;&#x63A5;</p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl.getElementsByTagName('a').length>0){targetUl.className='toc';}</script>
+
+<pre><code class="lang-html">&#x4F5C;&#x8005;: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;
+&#x94FE;&#x63A5;: https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/security-management/authorization.html
+&#x6765;&#x6E90;: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;
+&#x672C;&#x6587;&#x539F;&#x521B;&#x53D1;&#x5E03;&#x4E8E;&#x300C;&#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#x300D;,&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#x51FA;&#x5904;,&#x8C22;&#x8C22;&#x5408;&#x4F5C;!
+</code></pre>
+<p><img src="../asset/weixin/weixin-QR-code.png" alt="/asset/weixin/weixin-QR-code.png"> </p>
+<footer class="page-footer"><span class="copyright">&#xA9; &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
+2021-08-01 17:54:11
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="authentication.html" class="navigation navigation-prev " aria-label="Previous page: Security 身份认证">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../shiro/shiro.html" class="navigation navigation-next " aria-label="Next page: shiro 安全管理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Security 权限认证","level":"11.1.2","depth":2,"next":{"title":"shiro 安全管理","level":"11.1.3","depth":2,"path":"shiro/shiro.md","ref":"shiro/shiro.md","articles":[]},"previous":{"title":"Security 身份认证","level":"11.1.1","depth":2,"path":"security-management/authentication.md","ref":"security-management/authentication.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toc","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link-plus","code","chart","favicon-absolute","github-buttons","advanced-emoji","rss","copyright","tbfed-pagefooter","donate","diff","simple-mind-map","hide-element","audio_image","mermaid-gb3","baidu-tongji-with-multiple-channel","google-tongji-with-multiple-channel","icp"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 悟空非空也","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"diff":{"method":"diffChars","options":{},"type":"markdown"},"baidu-tongji-with-multiple-channel":{"multipleChannelConfig":{"localhost":{"token":"5273b2f99de3bc190886abb53f62267e"},"snowdreams1006.tech":{"token":"468a97b20b79bc025d27afbee73d2f39"},"blog.snowdreams1006.cn":{"token":"606f5db455f771889dcfd16bb2bd313b"},"snowdreams1006.github.io":{"token":"5273b2f99de3bc190886abb53f62267e"},"snowdreams1006.gitee.io":{"token":"60ec676f32be4579eb53a430e153f677"},"snowdreams1006.gitlab.io":{"token":"187a0e5601c4e4987cdb5b8df09c9b21"},"snowdreams1006.gitbook.io":{"token":"6e2ee1b7bea146b2d6d9382bbf803083"}},"url":"https://hm.baidu.com/hm.js"},"splitter":{},"google-tongji-with-multiple-channel":{"multipleChannelConfig":{"localhost":{"token":"UA-140787039-2"},"snowdreams1006.gitbook.io":{"token":"UA-140787039-1"},"snowdreams1006.github.io":{"token":"UA-140787039-2"},"snowdreams1006.gitee.io":{"token":"UA-140787039-3"},"snowdreams1006.gitlab.io":{"token":"UA-140787039-4"},"snowdreams1006.tech":{"token":"UA-140787039-5"},"blog.snowdreams1006.cn":{"token":"UA-140787039-6"}},"url":"https://www.googletagmanager.com/gtag/js"},"copyright":{"copyProtect":false,"site":"https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/","author":"悟空非空也","website":"悟空非空也","image":"/asset/weixin/weixin-QR-code.png"},"toc":{"addClass":true,"className":"toc"},"edit-link-plus":{"label":"编辑本页","base":"https://github.com/WuKongNotNull/spring-boot-quickstart-wukongnote/blob/main/"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"/asset/pay/ali-pay.png","alipayText":"支付宝","button":"赞 👍 赏","title":"","wechat":"/asset/pay/wechat-pay.png","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"asset/wukong-favicon.ico"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']",".copyright"]},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["markdown","git","github","gitbook","java","php"],"title":"悟空非空也 - springboot 快速入门","description":"帮助springboot 初学者快速入门的详细的悟空笔记，笔记结构：理论讲解+小案例+小项目，通俗易懂。个人博客：www.wukongnotnull.com","author":"wukongnotnull","site_url":"https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/","feed_url":"https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/rss","managingEditor":"1390128154@qq.com","webMaster":"1390128154@qq.com"},"audio_image":{},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"icp":{"link":"http://www.beian.miit.gov.cn/","style":{},"number":"苏ICP备2021034291号"},"github-buttons":{"buttons":[{"user":"WuKongNotNull","repo":"spring-boot-quickstart-wukongnote","type":"star","size":"small"}]},"expandable-chapters-small":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"autoFit":true,"linkShape":"diagonal","preset":"colorful","style":{},"type":"markdown"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"悟空非空也","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"悟空非空也 - SpringBoot 快速入门","language":"zh-hans","links":{"sidebar":{"科学上网":"https://github.com/WuKongNotNull/awesome-free-vpn","JetBrains 全家桶":"https://www.bilibili.com/read/cv11463068"}},"gitbook":"*","description":"悟空非空也文档集,个人博客 https://www.wukongnotnull.com/"},"file":{"path":"security-management/authorization.md","mtime":"2021-08-01T09:54:11.208Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-05T07:30:00.925Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link-plus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copyright/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-simple-mind-map/bundle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu-tongji-with-multiple-channel/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-google-tongji-with-multiple-channel/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

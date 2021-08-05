@@ -4,7 +4,7 @@
         <description><![CDATA[悟空非空也个人博客 http://wukongnotnull.com]]></description>
         <link>https://wukongnotnull.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 05 Aug 2021 05:52:03 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 05 Aug 2021 07:34:12 GMT</lastBuildDate>
         <atom:link href="https://wukongnotnull.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[wukongnotnull]]></author>
         <managingEditor><![CDATA[1390128154@qq.com]]></managingEditor>
@@ -24,12 +24,22 @@
         </item>
         <item>
             <title><![CDATA[java 全集]]></title>
+            <description><![CDATA[| 等级 |  开启新篇章  |  说明  |
+| :--: | :----------: | :----: |
+|  1   | 倔强青铜 | 入门级 |
+|  2   | 秩序白银 |  待续  |
+|  3   | 荣耀黄金 |  待续  |
+|  4   | 尊贵铂金 |  待续  |
+|  5   | 永恒钻石 |  待续  |
+|  6   | 至尊星耀 |  待续  |
+|  7   | 最强王者 |  待续  |]]></description>
             <link>https://wukongnotnull.github.iocatalog/java.html</link>
             <guid isPermaLink="true">https://wukongnotnull.github.iocatalog/java.html</guid>
             <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[springboot 全集]]></title>
+            <title><![CDATA[Spring Boot]]></title>
+            <description><![CDATA[springboot  课程的简述]]></description>
             <link>https://wukongnotnull.github.iocatalog/springboot.html</link>
             <guid isPermaLink="true">https://wukongnotnull.github.iocatalog/springboot.html</guid>
             <dc:creator><![CDATA[wukongnotnull]]></dc:creator>

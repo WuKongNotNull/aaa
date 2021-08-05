@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[悟空非空也 - springboot 快速入门]]></title>
+        <description><![CDATA[帮助springboot 初学者快速入门的详细的悟空笔记，笔记结构：理论讲解+小案例+小项目，通俗易懂。个人博客：www.wukongnotnull.com]]></description>
+        <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Thu, 05 Aug 2021 07:30:44 GMT</lastBuildDate>
+        <atom:link href="https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/rss" rel="self" type="application/rss+xml"/>
+        <author><![CDATA[wukongnotnull]]></author>
+        <managingEditor><![CDATA[1390128154@qq.com]]></managingEditor>
+        <webMaster><![CDATA[1390128154@qq.com]]></webMaster>
+        <category><![CDATA[markdown]]></category>
+        <category><![CDATA[git]]></category>
+        <category><![CDATA[github]]></category>
+        <category><![CDATA[gitbook]]></category>
+        <category><![CDATA[java]]></category>
+        <category><![CDATA[php]]></category>
+        <item>
+            <title><![CDATA[自我介绍]]></title>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Spring Boot 简介]]></title>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/introduction.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/introduction.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[sbqt001]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/initialzr-build.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/initialzr-build.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[sbqt002]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/modify-banner.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/modify-banner.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[pom]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/unit-test.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/unit-test.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[实操]]></title>
+            <description><![CDATA[第1步]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/hot-deploy.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/hot-deploy.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[依赖管理]]></title>
+            <description><![CDATA[对依赖进行统一管理]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/dependency-management.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/dependency-management.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Spring Boot 自动配置]]></title>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/auto-config.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/auto-config.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Spring Boot 执行流程]]></title>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/execute-flow.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/introduction/execute-flow.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/config-annotation/config-annotation.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/config-annotation/config-annotation.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[java web 下有好几种日志框架，比如：logback，log4j，log4j2（slj4f 并不是一种日志框架，它相当于定义了规范，实现了这个规范的日志框架就能够用 slj4f 调用）。其中性能最高的应该使 logback 了，而且 springboot 默认使用的也是 logback 日志。默认情况下 Spring Boot 将 info 级别的日志输出到控制台中，不会写到日志文件，且不能进行复杂配置。]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/config-annotation/default-log.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/config-annotation/default-log.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[配置端口号]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/config-annotation/application-config.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/config-annotation/application-config.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[@ConfigurationProperties注入属性]]></title>
+            <description><![CDATA[第1种方法 properties]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/config-annotation/inject-property.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/config-annotation/inject-property.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[使用 @PropertySource 加载自定义配置文件]]></title>
+            <description><![CDATA[自定义配置文件<br>
+test.properties]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/config-annotation/custom-config.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/config-annotation/custom-config.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[使用profile文件进行多环境配置]]></title>
+            <description><![CDATA[多环境配置文件格式]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/config-annotation/profile-config.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/config-annotation/profile-config.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[application.properties]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/config-annotation/property-reference.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/config-annotation/property-reference.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[image-20200627115255361]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/data-access/data-access.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/data-access/data-access.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[基础环境搭建]]></title>
+            <description><![CDATA[创建数据库]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/data-access/env-setup.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/data-access/env-setup.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[mapper接口]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/data-access/integrate-mybatis.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/data-access/integrate-mybatis.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Spring Date JPA介绍]]></title>
+            <description><![CDATA[Spring Data 是Spring的一个子项目，旨在统一和简化各类型数据的持久化存储方式，而不拘泥于是关系型数据库还是NoSQL数据库。无论是哪种持久化存储方式，数据访问对象（Data Access Objects，DAO）都会提供对对象的增加、删除、修改和查询的方法，以及排序和分页方法等。
+Spring Data 提供了基于这些层面的统一接口（如：CrudRepository、 PagingAndSortingRepository），以实现持久化的存储。]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/data-access/integrate-jpa.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/data-access/integrate-jpa.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Redis介绍]]></title>
+            <description><![CDATA[什么是Redis]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/data-access/integrate-redis.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/data-access/integrate-redis.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[Spring Boot 集成了Mybatis框架，Mybatis底层数据访问层实现基于jdbc 来实现，所以在Spring Boot 环境下对 事物进行控制，事务实现由Spring Boot实现并自动配置，在使用时通过注解方式标注相关方法加入事务控制即可]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/transaction-management/transaction-management.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/transaction-management/transaction-management.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Spring Boot 支持的视图技术]]></title>
+            <description><![CDATA[image-20200627171028805]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/view-tech/view-tech.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/view-tech/view-tech.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[由于SpringBoot的项目一般打成jar包，项目结构中没有 webapps 目录。]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/view-tech/static-resource.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/view-tech/static-resource.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Thymeleaf 介绍]]></title>
+            <description><![CDATA[Thymeleaf 官网
+https://www.thymeleaf.org/index.html]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/view-tech/thymeleaf.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/view-tech/thymeleaf.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[SpringBoot内部支持Freemarker 视图技术的集成，并提供了自动化配置类FreeMarkerAutoConﬁguration，借助自 动化配置可以很方便的集成Freemarker 视图到SpringBoot环境中。]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/view-tech/freemarker.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/view-tech/freemarker.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/web-dev.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/web-dev.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[整合 Spring MVC]]></title>
+            <description><![CDATA[pom]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/integrate-mvc.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/integrate-mvc.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[日常项目开发中，对于前端提交的表单，后台接口接收到表单数据后，为了程序的严谨性，通常后端会加入业务参数 的合法校验操作来避免程序的非技术性bug，这里对于客户端提交的数据校验，SpringBoot通过spring-boot-starter-validation 模块包含了数据校验的工作。]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/mvc-validation.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/mvc-validation.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[在Spring Boot 提供了对异常的全局性处理，相关注解如下:]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/global-exception.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/global-exception.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[组件注册方式整合Servlet三大组件]]></title>
+            <description><![CDATA[myServlet]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/integrate-servlet.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/integrate-servlet.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[多文件上传]]></title>
+            <description><![CDATA[controller]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/file-upload.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/file-upload.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[文件下载]]></title>
+            <description><![CDATA[pom.xml]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/file-download.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/file-download.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[maven打包插件]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/jar-package.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/jar-package.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[pom.xml]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/war-package.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/war-package.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/fore-end-separation/fore-end-separation.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/fore-end-separation/fore-end-separation.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[浏览器出于安全的考虑，使用 XMLHttpRequest对象发起 HTTP请求时必须遵守同源策略，否则就是跨域的HTTP请求，默认情况下是被禁止的。 同源策略要求源相同才能正常进行通信，即协议、域名、端口号都完全一致。]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/fore-end-separation/cors.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/fore-end-separation/cors.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[在前后端分离的场景中，采用 Token 方案进行登录验证。登录成功时，后端根据用户信息生成一个 Token 字符串返回给前端（客户端）存储。]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/fore-end-separation/token-login.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/fore-end-separation/token-login.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[​		如果我们想在多个Handler方法执行之前或者之后都进行一些处理，甚至某些情况下需要拦截掉，不让Handler方法执行。那么可以使用SpringMVC为我们提供的拦截器。]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/fore-end-separation/token-authorization.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/fore-end-separation/token-authorization.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[引入坐标]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/fore-end-separation/user-management.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/fore-end-separation/user-management.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[由于Spring Boot能够快速开发、便捷部署等特性，通常在使用Spring Boot构建Restful 接口应用时考虑到多终端的 原因，这些终端会共用很多底层业务逻辑，因此我们会抽象出这样一层来同时服务于多个移动端或者Web前端。对于 不同的终端公用一套接口API时对于联调测试时就需要知道后端提供的接口Api 列表文档，对于服务端开发人员来说 就需要编写接口文档，描述接口调用地址参数结果等，这里借助第三方构建工具Swagger2来实现Api文档生成功能 。]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/Integrated-swagger/integrated-swagger.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/Integrated-swagger/integrated-swagger.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/cache-management/cache-management.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/cache-management/cache-management.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[创建项目]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/cache-management/env-setup.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/cache-management/env-setup.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[spring boot 自带缓存机制，可以使用默认缓存，避免每次查询都去数据库访问一边，避免资源消耗]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/cache-management/default-cache.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/cache-management/default-cache.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Redis 缓存介绍]]></title>
+            <description><![CDATA[pom中添加redis的依赖启动器]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/cache-management/integrate-redis.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/cache-management/integrate-redis.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[EhCache 是一个纯Java的进程内缓存框架，具有快速、精干等特点，是Hibernate中默认CacheProvider。Ehcache是一种广泛使用的开源Java分布式缓存。主要面向通用缓存,Java EE和轻量级容器。它具有内存和磁盘存储，缓存加载器,缓存扩展,缓存异常处理程序,一个gzip缓存servlet过滤器,支持REST和SOAP api等特点。]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/cache-management/integrate-ehcache.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/cache-management/integrate-ehcache.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[SpringSecurity介绍]]></title>
+            <description><![CDATA[pom.xml]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/security-management/security-management.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/security-management/security-management.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[内存身份认证]]></title>
+            <description><![CDATA[sql 脚本]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/security-management/authentication.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/security-management/authentication.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[hasRole()]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/security-management/authorization.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/security-management/authorization.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[什么是 Shiro？]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/shiro/shiro.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/shiro/shiro.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[为什么要使用消息服务]]></title>
+            <description><![CDATA[在多数应用尤其是分布式系统中，消息服务是不可或缺的重要部分，它使用起来比较简单，同时解决了不少难题，例如异步处理、应用解耦、流量削锋、分布式事务管理等，使用消息服务可以实现一个高性能、高可用、高扩展的系统。]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/message-service/message-service.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/message-service/message-service.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[RabbitMQ 消息中间件]]></title>
+            <description><![CDATA[image-20200723104834356]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/message-service/rabbitMQ.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/message-service/rabbitMQ.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/task-management/task-management.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/task-management/task-management.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[无返回值异步任务调用]]></title>
+            <description><![CDATA[1-application.java]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/task-management/asynch-call.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/task-management/asynch-call.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[定时任务介绍]]></title>
+            <description><![CDATA[@Scheduled注解]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/task-management/timed-task.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/task-management/timed-task.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[发送纯文本邮件]]></title>
+            <description><![CDATA[pom.xml]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/task-management/send-email.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/task-management/send-email.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[在日常项目运行中，我们总会有需求在某一时间段周期性的执行某个动作。比如每天在某个时间段导出报表，或者每 隔多久统计一次现在在线的用户量等。]]></description>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/task-management/integrate-quartz .html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/task-management/integrate-quartz .html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Spring Boot 综合项目实战]]></title>
+            <link>https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/integrated-project/integrated-project.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/integrated-project/integrated-project.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,1593 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>整合 Servlet Filter Listener · 悟空非空也 - SpringBoot 快速入门</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="悟空非空也">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="file-upload.html" />
+    
+    
+    <link rel="prev" href="global-exception.html" />
+    
+
+    <link href="https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/rss" title="悟空非空也 - springboot 快速入门" rel="alternate" type="application/rss+xml" />
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"WuKongNotNull","repo":"spring-boot-quickstart-wukongnote","type":"star","size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href="asset/wukong-favicon.ico" type="image/x-icon">
+    
+    
+    
+    
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-precomposed-152.png">
+    
+    
+        
+    
+    
+        
+    
+
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/WuKongNotNull/awesome-free-vpn" target="_blank" class="custom-link">科学上网</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://www.bilibili.com/read/cv11463068" target="_blank" class="custom-link">JetBrains 全家桶</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    首页 - Spring Boot 青铜篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../introduction/introduction.html">
+            
+                <a href="../introduction/introduction.html">
+            
+                    
+                    开发入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../introduction/initialzr-build.html">
+            
+                <a href="../introduction/initialzr-build.html">
+            
+                    
+                    Spring Initialzr 构建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../introduction/modify-banner.html">
+            
+                <a href="../introduction/modify-banner.html">
+            
+                    
+                    启动图标设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../introduction/unit-test.html">
+            
+                <a href="../introduction/unit-test.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../introduction/hot-deploy.html">
+            
+                <a href="../introduction/hot-deploy.html">
+            
+                    
+                    热部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../introduction/dependency-management.html">
+            
+                <a href="../introduction/dependency-management.html">
+            
+                    
+                    依赖管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../introduction/auto-config.html">
+            
+                <a href="../introduction/auto-config.html">
+            
+                    
+                    自动配置 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../introduction/execute-flow.html">
+            
+                <a href="../introduction/execute-flow.html">
+            
+                    
+                    执行流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../config-annotation/config-annotation.html">
+            
+                <a href="../config-annotation/config-annotation.html">
+            
+                    
+                    核心配置与注解
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../config-annotation/default-log.html">
+            
+                <a href="../config-annotation/default-log.html">
+            
+                    
+                    default-log.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../config-annotation/application-config.html">
+            
+                <a href="../config-annotation/application-config.html">
+            
+                    
+                    application 配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../config-annotation/inject-property.html">
+            
+                <a href="../config-annotation/inject-property.html">
+            
+                    
+                    属性注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../config-annotation/custom-config.html">
+            
+                <a href="../config-annotation/custom-config.html">
+            
+                    
+                    自定义配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../config-annotation/profile-config.html">
+            
+                <a href="../config-annotation/profile-config.html">
+            
+                    
+                    profile 文件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../config-annotation/property-reference.html">
+            
+                <a href="../config-annotation/property-reference.html">
+            
+                    
+                    yml 高级玩法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../data-access/data-access.html">
+            
+                <a href="../data-access/data-access.html">
+            
+                    
+                    数据访问
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../data-access/env-setup.html">
+            
+                <a href="../data-access/env-setup.html">
+            
+                    
+                    环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../data-access/integrate-mybatis.html">
+            
+                <a href="../data-access/integrate-mybatis.html">
+            
+                    
+                    整合 MyBatis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../data-access/integrate-jpa.html">
+            
+                <a href="../data-access/integrate-jpa.html">
+            
+                    
+                    整合 JPA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../data-access/integrate-redis.html">
+            
+                <a href="../data-access/integrate-redis.html">
+            
+                    
+                    整合 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../transaction-management/transaction-management.html">
+            
+                <a href="../transaction-management/transaction-management.html">
+            
+                    
+                    事务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../view-tech/view-tech.html">
+            
+                <a href="../view-tech/view-tech.html">
+            
+                    
+                    支持视图技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../view-tech/static-resource.html">
+            
+                <a href="../view-tech/static-resource.html">
+            
+                    
+                    访问静态资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../view-tech/thymeleaf.html">
+            
+                <a href="../view-tech/thymeleaf.html">
+            
+                    
+                    整合 thymeleaf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../view-tech/freemarker.html">
+            
+                <a href="../view-tech/freemarker.html">
+            
+                    
+                    整合 freemarker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="web-dev.html">
+            
+                <a href="web-dev.html">
+            
+                    
+                    实现 Web 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="integrate-mvc.html">
+            
+                <a href="integrate-mvc.html">
+            
+                    
+                    整合 MVC 和拦截器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="mvc-validation.html">
+            
+                <a href="mvc-validation.html">
+            
+                    
+                    数据校验 Validation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="global-exception.html">
+            
+                <a href="global-exception.html">
+            
+                    
+                    全局异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.1.4" data-path="integrate-servlet.html">
+            
+                <a href="integrate-servlet.html">
+            
+                    
+                    整合 Servlet Filter Listener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.5" data-path="file-upload.html">
+            
+                <a href="file-upload.html">
+            
+                    
+                    文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6" data-path="file-download.html">
+            
+                <a href="file-download.html">
+            
+                    
+                    文件下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.7" data-path="jar-package.html">
+            
+                <a href="jar-package.html">
+            
+                    
+                    jar 打包部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.8" data-path="war-package.html">
+            
+                <a href="war-package.html">
+            
+                    
+                    war 打包部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../fore-end-separation/fore-end-separation.html">
+            
+                <a href="../fore-end-separation/fore-end-separation.html">
+            
+                    
+                    前后端分离
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" >
+            
+                <span>
+            
+                    
+                    postman
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" >
+            
+                <span>
+            
+                    
+                    restfull 风格接口设计
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" >
+            
+                <span>
+            
+                    
+                    统一响应结果
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../fore-end-separation/cors.html">
+            
+                <a href="../fore-end-separation/cors.html">
+            
+                    
+                    CORS 跨域处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5" data-path="../fore-end-separation/token-login.html">
+            
+                <a href="../fore-end-separation/token-login.html">
+            
+                    
+                    token-login.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.6" data-path="../fore-end-separation/token-authorization.html">
+            
+                <a href="../fore-end-separation/token-authorization.html">
+            
+                    
+                    token-authorization.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.7" data-path="../fore-end-separation/user-management.html">
+            
+                <a href="../fore-end-separation/user-management.html">
+            
+                    
+                    用户管理 CRUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../Integrated-swagger/integrated-swagger.html">
+            
+                <a href="../Integrated-swagger/integrated-swagger.html">
+            
+                    
+                    Swagger Api文档管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../cache-management/cache-management.html">
+            
+                <a href="../cache-management/cache-management.html">
+            
+                    
+                    缓存管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../cache-management/env-setup.html">
+            
+                <a href="../cache-management/env-setup.html">
+            
+                    
+                    基础环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../cache-management/default-cache.html">
+            
+                <a href="../cache-management/default-cache.html">
+            
+                    
+                    默认缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../cache-management/integrate-redis.html">
+            
+                <a href="../cache-management/integrate-redis.html">
+            
+                    
+                    redis 缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.4" data-path="../cache-management/integrate-ehcache.html">
+            
+                <a href="../cache-management/integrate-ehcache.html">
+            
+                    
+                    整合 ehcache
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../security-management/security-management.html">
+            
+                <a href="../security-management/security-management.html">
+            
+                    
+                    安全管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1.1" data-path="../security-management/authentication.html">
+            
+                <a href="../security-management/authentication.html">
+            
+                    
+                    Security 身份认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.2" data-path="../security-management/authorization.html">
+            
+                <a href="../security-management/authorization.html">
+            
+                    
+                    Security 权限认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.3" data-path="../shiro/shiro.html">
+            
+                <a href="../shiro/shiro.html">
+            
+                    
+                    shiro 安全管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../message-service/message-service.html">
+            
+                <a href="../message-service/message-service.html">
+            
+                    
+                    消息服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1.1" data-path="../message-service/rabbitMQ.html">
+            
+                <a href="../message-service/rabbitMQ.html">
+            
+                    
+                    rabbitMQ 消息中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../task-management/task-management.html">
+            
+                <a href="../task-management/task-management.html">
+            
+                    
+                    任务管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="13.1.1" data-path="../task-management/asynch-call.html">
+            
+                <a href="../task-management/asynch-call.html">
+            
+                    
+                    异步调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.1.2" data-path="../task-management/timed-task.html">
+            
+                <a href="../task-management/timed-task.html">
+            
+                    
+                    定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.1.3" data-path="../task-management/send-email.html">
+            
+                <a href="../task-management/send-email.html">
+            
+                    
+                    发送邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.1.4" data-path="../task-management/integrate-quartz .html">
+            
+                <a href="../task-management/integrate-quartz .html">
+            
+                    
+                    整合 Quartz 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../integrated-project/integrated-project.html">
+            
+                <a href="../integrated-project/integrated-project.html">
+            
+                    
+                    综合项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+
+    
+    <li>
+        
+        
+        
+            
+        
+        
+            <a href="http://www.beian.miit.gov.cn/" target="blank" class="gitbook-link">
+                苏ICP备2021034291号
+            </a>
+        
+    </li>
+    
+</ul>
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >整合 Servlet Filter Listener</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7EC4;&#x4EF6;&#x6CE8;&#x518C;&#x65B9;&#x5F0F;&#x6574;&#x5408;servlet&#x4E09;&#x5927;&#x7EC4;&#x4EF6;"><b>1. </b>&#x7EC4;&#x4EF6;&#x6CE8;&#x518C;&#x65B9;&#x5F0F;&#x6574;&#x5408;Servlet&#x4E09;&#x5927;&#x7EC4;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6574;&#x5408;-servlet-&#x7EC4;&#x4EF6;"><b>1.1. </b>&#x6574;&#x5408; servlet &#x7EC4;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#filter"><b>1.2. </b>filter</a></li><li><span class="title-icon "></span><a href="#listener"><b>1.3. </b>listener</a></li></ul><li><span class="title-icon "></span><a href="#&#x8DEF;&#x5F84;&#x626B;&#x63CF;&#x65B9;&#x5F0F;&#x6574;&#x5408;servlet&#x4E09;&#x5927;&#x7EC4;&#x4EF6;"><b>2. </b>&#x8DEF;&#x5F84;&#x626B;&#x63CF;&#x65B9;&#x5F0F;&#x6574;&#x5408;Servlet&#x4E09;&#x5927;&#x7EC4;&#x4EF6;</a></li></ul></div><a href="#&#x7EC4;&#x4EF6;&#x6CE8;&#x518C;&#x65B9;&#x5F0F;&#x6574;&#x5408;servlet&#x4E09;&#x5927;&#x7EC4;&#x4EF6;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7EC4;&#x4EF6;&#x6CE8;&#x518C;&#x65B9;&#x5F0F;&#x6574;&#x5408;servlet&#x4E09;&#x5927;&#x7EC4;&#x4EF6;"><a name="&#x7EC4;&#x4EF6;&#x6CE8;&#x518C;&#x65B9;&#x5F0F;&#x6574;&#x5408;servlet&#x4E09;&#x5927;&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x4EF6;&#x6CE8;&#x518C;&#x65B9;&#x5F0F;&#x6574;&#x5408;servlet&#x4E09;&#x5927;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7EC4;&#x4EF6;&#x6CE8;&#x518C;&#x65B9;&#x5F0F;&#x6574;&#x5408;Servlet&#x4E09;&#x5927;&#x7EC4;&#x4EF6;</h1>
+<blockquote>
+<p>3 &#x5927;&#x7EC4;&#x4EF6;&#x5206;&#x522B;&#x662F; servlet  filter  &#x548C; listener </p>
+</blockquote>
+<p><br></p>
+<h2 id="&#x6574;&#x5408;-servlet-&#x7EC4;&#x4EF6;"><a name="&#x6574;&#x5408;-servlet-&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x6574;&#x5408;-servlet-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x6574;&#x5408; servlet &#x7EC4;&#x4EF6;</h2>
+<blockquote>
+<p>servlet  &#x8D1F;&#x8D23;&#x548C;&#x6D4F;&#x89C8;&#x5668;&#x8FDB;&#x884C;&#x4EA4;&#x4E92; &#xFF0C;&#x63A5;&#x53D7;&#x8BF7;&#x6C42;&#xFF0C;&#x627E;&#x5230;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x54CD;&#x5E94;&#x4FE1;&#x606F;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#xFF08;&#x6D4F;&#x89C8;&#x5668;&#xFF09;</p>
+</blockquote>
+<p><br></p>
+<p><strong>myServlet</strong></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.wukongnotnull.servlet;
+<span class="hljs-comment">/* author: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#xFF08;B&#x7AD9;/&#x77E5;&#x4E4E;/&#x516C;&#x4F17;&#x53F7;&#xFF09; */</span>
+
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+<span class="hljs-keyword">import</span> javax.servlet.ServletException;
+<span class="hljs-keyword">import</span> javax.servlet.http.HttpServlet;
+<span class="hljs-keyword">import</span> javax.servlet.http.HttpServletRequest;
+<span class="hljs-keyword">import</span> javax.servlet.http.HttpServletResponse;
+<span class="hljs-keyword">import</span> java.io.IOException;
+
+<span class="hljs-meta">@Component</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyServlet</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">HttpServlet</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doGet</span><span class="hljs-params">(HttpServletRequest req, HttpServletResponse resp)</span>
+            <span class="hljs-keyword">throws</span> ServletException, IOException </span>{
+        <span class="hljs-keyword">this</span>.doPost(req, resp);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doPost</span><span class="hljs-params">(HttpServletRequest req, HttpServletResponse resp)</span>
+            <span class="hljs-keyword">throws</span> ServletException, IOException </span>{
+        resp.getWriter().write(<span class="hljs-string">&quot;hello MyServlet ,hello wukong&quot;</span>);
+    }
+
+}
+</code></pre>
+<p><br></p>
+<p><strong>servletConfig</strong></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.wukongnotnull.config;
+<span class="hljs-comment">/* author: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#xFF08;B&#x7AD9;/&#x77E5;&#x4E4E;/&#x516C;&#x4F17;&#x53F7;&#xFF09; */</span>
+
+<span class="hljs-keyword">import</span> com.wukongnotnull.servlet.MyServlet;
+<span class="hljs-keyword">import</span> org.springframework.boot.web.servlet.ServletRegistrationBean;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;
+
+
+<span class="hljs-meta">@Configuration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ServletConfig</span> </span>{
+
+    <span class="hljs-comment">// &#x6CE8;&#x518C;Servlet&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-meta">@Bean</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ServletRegistrationBean&lt;MyServlet&gt; <span class="hljs-title">getServlet</span><span class="hljs-params">(MyServlet myServlet)</span></span>{
+
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ServletRegistrationBean&lt;&gt;(myServlet,<span class="hljs-string">&quot;/myServlet&quot;</span>);
+    }
+
+
+}
+</code></pre>
+<p><br></p>
+<p><strong>&#x6D4B;&#x8BD5;</strong>  <br></p>
+<p> &#x901A;&#x8FC7;&#x8DEF;&#x5F84;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#x3002;</p>
+<p><br></p>
+<h2 id="filter"><a name="filter" class="anchor-navigation-ex-anchor" href="#filter"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. filter</h2>
+<p><strong>&#x81EA;&#x5B9A;&#x4E49; MyFilter</strong> </p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.wukongnotnull.servlet;
+<span class="hljs-comment">/* author: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#xFF08;B&#x7AD9;/&#x77E5;&#x4E4E;/&#x516C;&#x4F17;&#x53F7;&#xFF09; */</span>
+
+
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+<span class="hljs-keyword">import</span> javax.servlet.*;
+<span class="hljs-keyword">import</span> java.io.IOException;
+
+<span class="hljs-meta">@Component</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyFilter</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Filter</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(FilterConfig filterConfig)</span> <span class="hljs-keyword">throws</span> ServletException </span>{
+
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doFilter</span><span class="hljs-params">(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)</span> <span class="hljs-keyword">throws</span> IOException, ServletException </span>{
+        System.out.println(<span class="hljs-string">&quot;&#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#x5728;&#x6267;&#x884C;&#x8FC7;&#x6EE4;&#x64CD;&#x4F5C;&#x3002;&#x3002;&#x3002;&#x3002;&quot;</span>);
+        filterChain.doFilter(servletRequest,servletResponse);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">destroy</span><span class="hljs-params">()</span> </span>{
+
+    }
+}
+</code></pre>
+<p><br></p>
+<p><strong>FilterConfig</strong></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.wukongnotnull.config;
+<span class="hljs-comment">/* author: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#xFF08;B&#x7AD9;/&#x77E5;&#x4E4E;/&#x516C;&#x4F17;&#x53F7;&#xFF09; */</span>
+
+<span class="hljs-keyword">import</span> com.wukongnotnull.servlet.MyFilter;
+<span class="hljs-keyword">import</span> org.springframework.boot.web.servlet.FilterRegistrationBean;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;
+
+
+<span class="hljs-keyword">import</span> java.util.Arrays;
+<span class="hljs-keyword">import</span> java.util.Collections;
+
+<span class="hljs-meta">@Configuration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FilterConfig</span> </span>{
+
+    <span class="hljs-comment">// &#x6CE8;&#x518C;filter&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-meta">@Bean</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> FilterRegistrationBean&lt;MyFilter&gt; <span class="hljs-title">getFilter</span><span class="hljs-params">(MyFilter myFilter)</span></span>{
+        FilterRegistrationBean&lt;MyFilter&gt; myFilterFilterRegistrationBean = <span class="hljs-keyword">new</span> FilterRegistrationBean&lt;&gt;(myFilter);
+        myFilterFilterRegistrationBean.setUrlPatterns(Arrays.asList(<span class="hljs-string">&quot;/myServlet&quot;</span>));
+        <span class="hljs-keyword">return</span> myFilterFilterRegistrationBean;
+
+    }
+
+}
+</code></pre>
+<p><br></p>
+<h2 id="listener"><a name="listener" class="anchor-navigation-ex-anchor" href="#listener"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. listener</h2>
+<p><strong>MyListener</strong></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.wukongnotnull.servlet;
+<span class="hljs-comment">/* author: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#xFF08;B&#x7AD9;/&#x77E5;&#x4E4E;/&#x516C;&#x4F17;&#x53F7;&#xFF09; */</span>
+
+
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+
+<span class="hljs-keyword">import</span> javax.servlet.ServletContextEvent;
+<span class="hljs-keyword">import</span> javax.servlet.ServletContextListener;
+
+<span class="hljs-meta">@Component</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyListener</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ServletContextListener</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">contextInitialized</span><span class="hljs-params">(ServletContextEvent sce)</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;ServletContextListener  &#x5F00;&#x59CB;&#x521D;&#x59CB;&#x5316;.....&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">contextDestroyed</span><span class="hljs-params">(ServletContextEvent sce)</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;ServletContextListener  &#x9500;&#x6BC1;&#x6389;.....&quot;</span>);
+    }
+}
+</code></pre>
+<p><br></p>
+<p><strong>listenerConfig</strong></p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.wukongnotnull.config;
+<span class="hljs-comment">/* author: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#xFF08;B&#x7AD9;/&#x77E5;&#x4E4E;/&#x516C;&#x4F17;&#x53F7;&#xFF09; */</span>
+
+<span class="hljs-keyword">import</span> com.wukongnotnull.servlet.MyListener;
+<span class="hljs-keyword">import</span> org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;
+
+<span class="hljs-meta">@Configuration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ListenerConfig</span> </span>{
+
+    <span class="hljs-meta">@Bean</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ServletListenerRegistrationBean&lt;MyListener&gt; <span class="hljs-title">getListener</span><span class="hljs-params">(MyListener myListener)</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ServletListenerRegistrationBean&lt;&gt;(myListener);
+    }
+
+}
+</code></pre>
+<p><br></p>
+<h1 id="&#x8DEF;&#x5F84;&#x626B;&#x63CF;&#x65B9;&#x5F0F;&#x6574;&#x5408;servlet&#x4E09;&#x5927;&#x7EC4;&#x4EF6;"><a name="&#x8DEF;&#x5F84;&#x626B;&#x63CF;&#x65B9;&#x5F0F;&#x6574;&#x5408;servlet&#x4E09;&#x5927;&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x8DEF;&#x5F84;&#x626B;&#x63CF;&#x65B9;&#x5F0F;&#x6574;&#x5408;servlet&#x4E09;&#x5927;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x8DEF;&#x5F84;&#x626B;&#x63CF;&#x65B9;&#x5F0F;&#x6574;&#x5408;Servlet&#x4E09;&#x5927;&#x7EC4;&#x4EF6;</h1>
+<p><strong>&#x542F;&#x52A8;&#x7C7B;</strong></p>
+<blockquote>
+<p>&#x6DFB;&#x52A0;&#x6CE8;&#x89E3; @ServletComponentScan</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-meta">@SpringBootApplication</span>
+<span class="hljs-meta">@ServletComponentScan</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WebappThymeleafApplication</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        SpringApplication.run(WebappThymeleafApplication.class, args);
+    }
+
+}
+</code></pre>
+<p><br></p>
+<p><strong>myServlet</strong></p>
+<blockquote>
+<p> &#x6DFB;&#x52A0;&#x6CE8;&#x89E3;   @WebServlet(value = {&quot;/myServlet&quot;})</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.wukongnotnull.servlet;
+<span class="hljs-comment">/* author: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#xFF08;B&#x7AD9;/&#x77E5;&#x4E4E;/&#x516C;&#x4F17;&#x53F7;&#xFF09; */</span>
+
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+<span class="hljs-keyword">import</span> javax.servlet.ServletException;
+<span class="hljs-keyword">import</span> javax.servlet.http.HttpServlet;
+<span class="hljs-keyword">import</span> javax.servlet.http.HttpServletRequest;
+<span class="hljs-keyword">import</span> javax.servlet.http.HttpServletResponse;
+<span class="hljs-keyword">import</span> java.io.IOException;
+
+<span class="hljs-meta">@WebServlet</span>(value = {<span class="hljs-string">&quot;/myServlet&quot;</span>})
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyServlet</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">HttpServlet</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doGet</span><span class="hljs-params">(HttpServletRequest req, HttpServletResponse resp)</span>
+            <span class="hljs-keyword">throws</span> ServletException, IOException </span>{
+        <span class="hljs-keyword">this</span>.doPost(req, resp);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doPost</span><span class="hljs-params">(HttpServletRequest req, HttpServletResponse resp)</span>
+            <span class="hljs-keyword">throws</span> ServletException, IOException </span>{
+        resp.getWriter().write(<span class="hljs-string">&quot;hello MyServlet ,hello wukong&quot;</span>);
+    }
+
+}
+</code></pre>
+<p><br></p>
+<p><strong>myFilter</strong></p>
+<blockquote>
+<p>&#x6DFB;&#x52A0;&#x6CE8;&#x89E3; @WebFilter(value = {&quot;/myServlet&quot;})</p>
+</blockquote>
+<pre><code>package com.wukongnotnull.servlet;
+/* author: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#xFF08;B&#x7AD9;/&#x77E5;&#x4E4E;/&#x516C;&#x4F17;&#x53F7;&#xFF09; */
+
+import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
+import java.io.IOException;
+
+@WebFilter(value = {&quot;/myServlet&quot;})
+public class MyFilter implements Filter {
+
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+
+    }
+
+    @Override
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        System.out.println(&quot;&#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#x5728;&#x6267;&#x884C;&#x8FC7;&#x6EE4;&#x64CD;&#x4F5C;&#x3002;&#x3002;&#x3002;&#x3002;&quot;);
+        filterChain.doFilter(servletRequest,servletResponse);
+    }
+
+    @Override
+    public void destroy() {
+
+    }
+}
+</code></pre><p><strong>myListener.java</strong></p>
+<blockquote>
+<p>&#x6DFB;&#x52A0;&#x6CE8;&#x89E3; @WebListener</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.wukongnotnull.servlet;
+<span class="hljs-comment">/* author: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#xFF08;B&#x7AD9;/&#x77E5;&#x4E4E;/&#x516C;&#x4F17;&#x53F7;&#xFF09; */</span>
+
+<span class="hljs-keyword">import</span> javax.servlet.ServletContextEvent;
+<span class="hljs-keyword">import</span> javax.servlet.ServletContextListener;
+<span class="hljs-keyword">import</span> javax.servlet.annotation.WebListener;
+
+<span class="hljs-meta">@WebListener</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyListener</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ServletContextListener</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">contextInitialized</span><span class="hljs-params">(ServletContextEvent sce)</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;ServletContextListener  &#x5F00;&#x59CB;&#x521D;&#x59CB;&#x5316;.....&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">contextDestroyed</span><span class="hljs-params">(ServletContextEvent sce)</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;ServletContextListener  &#x9500;&#x6BC1;&#x6389;.....&quot;</span>);
+    }
+}
+</code></pre>
+<script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl.getElementsByTagName('a').length>0){targetUl.className='toc';}</script>
+
+<pre><code class="lang-html">&#x4F5C;&#x8005;: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;
+&#x94FE;&#x63A5;: https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/web-dev/integrate-servlet.html
+&#x6765;&#x6E90;: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;
+&#x672C;&#x6587;&#x539F;&#x521B;&#x53D1;&#x5E03;&#x4E8E;&#x300C;&#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#x300D;,&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#x51FA;&#x5904;,&#x8C22;&#x8C22;&#x5408;&#x4F5C;!
+</code></pre>
+<p><img src="../asset/weixin/weixin-QR-code.png" alt="/asset/weixin/weixin-QR-code.png"> </p>
+<footer class="page-footer"><span class="copyright">&#xA9; &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
+2021-07-19 14:58:01
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="global-exception.html" class="navigation navigation-prev " aria-label="Previous page: 全局异常处理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="file-upload.html" class="navigation navigation-next " aria-label="Next page: 文件上传">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"整合 Servlet Filter Listener","level":"7.1.4","depth":2,"next":{"title":"文件上传","level":"7.1.5","depth":2,"path":"web-dev/file-upload.md","ref":"web-dev/file-upload.md","articles":[]},"previous":{"title":"全局异常处理","level":"7.1.3","depth":2,"path":"web-dev/global-exception.md","ref":"web-dev/global-exception.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toc","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link-plus","code","chart","favicon-absolute","github-buttons","advanced-emoji","rss","copyright","tbfed-pagefooter","donate","diff","simple-mind-map","hide-element","audio_image","mermaid-gb3","baidu-tongji-with-multiple-channel","google-tongji-with-multiple-channel","icp"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 悟空非空也","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"diff":{"method":"diffChars","options":{},"type":"markdown"},"baidu-tongji-with-multiple-channel":{"multipleChannelConfig":{"localhost":{"token":"5273b2f99de3bc190886abb53f62267e"},"snowdreams1006.tech":{"token":"468a97b20b79bc025d27afbee73d2f39"},"blog.snowdreams1006.cn":{"token":"606f5db455f771889dcfd16bb2bd313b"},"snowdreams1006.github.io":{"token":"5273b2f99de3bc190886abb53f62267e"},"snowdreams1006.gitee.io":{"token":"60ec676f32be4579eb53a430e153f677"},"snowdreams1006.gitlab.io":{"token":"187a0e5601c4e4987cdb5b8df09c9b21"},"snowdreams1006.gitbook.io":{"token":"6e2ee1b7bea146b2d6d9382bbf803083"}},"url":"https://hm.baidu.com/hm.js"},"splitter":{},"google-tongji-with-multiple-channel":{"multipleChannelConfig":{"localhost":{"token":"UA-140787039-2"},"snowdreams1006.gitbook.io":{"token":"UA-140787039-1"},"snowdreams1006.github.io":{"token":"UA-140787039-2"},"snowdreams1006.gitee.io":{"token":"UA-140787039-3"},"snowdreams1006.gitlab.io":{"token":"UA-140787039-4"},"snowdreams1006.tech":{"token":"UA-140787039-5"},"blog.snowdreams1006.cn":{"token":"UA-140787039-6"}},"url":"https://www.googletagmanager.com/gtag/js"},"copyright":{"copyProtect":false,"site":"https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/","author":"悟空非空也","website":"悟空非空也","image":"/asset/weixin/weixin-QR-code.png"},"toc":{"addClass":true,"className":"toc"},"edit-link-plus":{"label":"编辑本页","base":"https://github.com/WuKongNotNull/spring-boot-quickstart-wukongnote/blob/main/"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"/asset/pay/ali-pay.png","alipayText":"支付宝","button":"赞 👍 赏","title":"","wechat":"/asset/pay/wechat-pay.png","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"asset/wukong-favicon.ico"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']",".copyright"]},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["markdown","git","github","gitbook","java","php"],"title":"悟空非空也 - springboot 快速入门","description":"帮助springboot 初学者快速入门的详细的悟空笔记，笔记结构：理论讲解+小案例+小项目，通俗易懂。个人博客：www.wukongnotnull.com","author":"wukongnotnull","site_url":"https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/","feed_url":"https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/rss","managingEditor":"1390128154@qq.com","webMaster":"1390128154@qq.com"},"audio_image":{},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"icp":{"link":"http://www.beian.miit.gov.cn/","style":{},"number":"苏ICP备2021034291号"},"github-buttons":{"buttons":[{"user":"WuKongNotNull","repo":"spring-boot-quickstart-wukongnote","type":"star","size":"small"}]},"expandable-chapters-small":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"autoFit":true,"linkShape":"diagonal","preset":"colorful","style":{},"type":"markdown"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"悟空非空也","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"悟空非空也 - SpringBoot 快速入门","language":"zh-hans","links":{"sidebar":{"科学上网":"https://github.com/WuKongNotNull/awesome-free-vpn","JetBrains 全家桶":"https://www.bilibili.com/read/cv11463068"}},"gitbook":"*","description":"悟空非空也文档集,个人博客 https://www.wukongnotnull.com/"},"file":{"path":"web-dev/integrate-servlet.md","mtime":"2021-07-19T06:58:01.953Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-05T07:30:00.925Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link-plus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copyright/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-simple-mind-map/bundle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu-tongji-with-multiple-channel/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-google-tongji-with-multiple-channel/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
