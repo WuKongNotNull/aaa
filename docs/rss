@@ -4,7 +4,7 @@
         <description><![CDATA[悟空非空也个人博客 http://wukongnotnull.com]]></description>
         <link>https://wukongnotnull.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 08 Jul 2021 01:39:44 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 05 Aug 2021 05:52:03 GMT</lastBuildDate>
         <atom:link href="https://wukongnotnull.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[wukongnotnull]]></author>
         <managingEditor><![CDATA[1390128154@qq.com]]></managingEditor>
@@ -20,6 +20,18 @@
             <description><![CDATA[自我介绍内容]]></description>
             <link>https://wukongnotnull.github.io</link>
             <guid isPermaLink="true">https://wukongnotnull.github.io</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[java 全集]]></title>
+            <link>https://wukongnotnull.github.iocatalog/java.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.iocatalog/java.html</guid>
+            <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[springboot 全集]]></title>
+            <link>https://wukongnotnull.github.iocatalog/springboot.html</link>
+            <guid isPermaLink="true">https://wukongnotnull.github.iocatalog/springboot.html</guid>
             <dc:creator><![CDATA[wukongnotnull]]></dc:creator>
         </item>
     </channel>
