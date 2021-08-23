@@ -138,7 +138,7 @@
     }
     </style>
     <script>
-        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"WuKongNotNull","repo":"spring-boot-quickstart-wukongnote","type":"star","size":"small"}]};
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"WuKongNotNull","repo":"spring-boot-qingtong-wukongnote","type":"star","size":"small"}]};
     </script>
 
     
@@ -254,7 +254,7 @@
                 <a href="../introduction/modify-banner.html">
             
                     
-                    启动图标设置
+                    启动Banner图标设置
             
                 </a>
             
@@ -306,7 +306,7 @@
                 <a href="../introduction/auto-config.html">
             
                     
-                    自动配置 
+                    自动配置
             
                 </a>
             
@@ -358,7 +358,7 @@
                 <a href="../config-annotation/application-config.html">
             
                     
-                    application 配置文件
+                    application 官方配置文件
             
                 </a>
             
@@ -397,7 +397,7 @@
                 <a href="../config-annotation/profile-config.html">
             
                     
-                    profile 文件配置
+                    Profile 文件配置
             
                 </a>
             
@@ -552,7 +552,7 @@
                 <a href="../aop-intergrate/aop-intergrate.html">
             
                     
-                    整合 Aop
+                    整合 AOP
             
                 </a>
             
@@ -592,7 +592,7 @@
                 <a href="../view-tech/view-tech.html">
             
                     
-                    支持视图技术
+                    视图技术
             
                 </a>
             
@@ -619,7 +619,7 @@
                 <a href="../view-tech/thymeleaf.html">
             
                     
-                    整合 thymeleaf
+                    整合 Thymeleaf
             
                 </a>
             
@@ -632,7 +632,7 @@
                 <a href="../view-tech/freemarker.html">
             
                     
-                    整合 freemarker
+                    整合 Freemarker
             
                 </a>
             
@@ -1284,8 +1284,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x6846;&#x67B6;-logback"><a name="&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x6846;&#x67B6;-logback" class="anchor-navigation-ex-anchor" href="#&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x6846;&#x67B6;-logback"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x6846;&#x67B6; logback</h2>
-<p>&#x2003;java web &#x4E0B;&#x6709;&#x597D;&#x51E0;&#x79CD;&#x65E5;&#x5FD7;&#x6846;&#x67B6;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;logback&#xFF0C;log4j&#xFF0C;log4j2&#xFF08;slj4f &#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x79CD;&#x65E5;&#x5FD7;&#x6846;&#x67B6;&#xFF0C;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5B9A;&#x4E49;&#x4E86;&#x89C4;&#x8303;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x8FD9;&#x4E2A;&#x89C4;&#x8303;&#x7684;&#x65E5;&#x5FD7;&#x6846;&#x67B6;&#x5C31;&#x80FD;&#x591F;&#x7528; slj4f &#x8C03;&#x7528;&#xFF09;&#x3002;&#x5176;&#x4E2D;&#x6027;&#x80FD;&#x6700;&#x9AD8;&#x7684;&#x5E94;&#x8BE5;&#x4F7F; logback &#x4E86;&#xFF0C;&#x800C;&#x4E14; springboot &#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684;&#x4E5F;&#x662F; logback &#x65E5;&#x5FD7;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B; Spring Boot &#x5C06; info &#x7EA7;&#x522B;&#x7684;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#xFF0C;&#x4E0D;&#x4F1A;&#x5199;&#x5230;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF0C;&#x4E14;&#x4E0D;&#x80FD;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x914D;&#x7F6E;&#x3002;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x7BA1;&#x7406;"><b> </b>&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x7BA1;&#x7406;</a></li><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x6846;&#x67B6;-logback"><b>1. </b>&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x6846;&#x67B6; logback</a></li></ul></ul></div><a href="#&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x7BA1;&#x7406;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x7BA1;&#x7406;"><a name="&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x7BA1;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x7BA1;&#x7406;</h1>
+<h2 id="&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x6846;&#x67B6;-logback"><a name="&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x6846;&#x67B6;-logback" class="anchor-navigation-ex-anchor" href="#&#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x6846;&#x67B6;-logback"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x6846;&#x67B6; logback</h2>
+<p>java web &#x4E0B;&#x6709;&#x597D;&#x51E0;&#x79CD;&#x65E5;&#x5FD7;&#x6846;&#x67B6;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;logback&#xFF0C;log4j&#xFF0C;log4j2&#xFF08;slj4f &#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x79CD;&#x65E5;&#x5FD7;&#x6846;&#x67B6;&#xFF0C;&#x5B83;&#x76F8;&#x5F53;&#x4E8E;&#x5B9A;&#x4E49;&#x4E86;&#x89C4;&#x8303;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x8FD9;&#x4E2A;&#x89C4;&#x8303;&#x7684;&#x65E5;&#x5FD7;&#x6846;&#x67B6;&#x5C31;&#x80FD;&#x591F;&#x7528; slj4f &#x8C03;&#x7528;&#xFF09;&#x3002;&#x5176;&#x4E2D;&#x6027;&#x80FD;&#x6700;&#x9AD8;&#x7684;&#x5E94;&#x8BE5;&#x4F7F; logback &#x4E86;&#xFF0C;&#x800C;&#x4E14; springboot &#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684;&#x4E5F;&#x662F; logback &#x65E5;&#x5FD7;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B; Spring Boot &#x5C06; info &#x7EA7;&#x522B;&#x7684;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#xFF0C;&#x4E0D;&#x4F1A;&#x5199;&#x5230;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF0C;&#x4E14;&#x4E0D;&#x80FD;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x914D;&#x7F6E;&#x3002;</p>
 <pre><code class="lang-java"><span class="hljs-keyword">import</span> org.slf4j.Logger;
 <span class="hljs-keyword">import</span> org.slf4j.LoggerFactory;
 
@@ -1301,15 +1302,15 @@
     <span class="hljs-comment"># &#x81EA;&#x5B9A;&#x4E49;&#x65E5;&#x5FD7;&#x540D;&#xFF0C;&#x5B58;&#x653E;&#x5728;&#x9879;&#x76EE;&#x8DEF;&#x5F84;&#x4E0B; &#xFF08;name &#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E; path&#xFF09;</span>
 <span class="hljs-attr">    name:</span> ./resources.log
 </code></pre>
-<h2 id=""> </h2>
+<p><br><br><br></p>
 <pre><code class="lang-html">&#x4F5C;&#x8005;: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;
-&#x94FE;&#x63A5;: https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/log-management/default-log.html
+&#x94FE;&#x63A5;: https://wukongnotnull.github.io/spring-boot-qingtong-wukongnote/log-management/default-log.html
 &#x6765;&#x6E90;: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;
 &#x672C;&#x6587;&#x539F;&#x521B;&#x53D1;&#x5E03;&#x4E8E;&#x300C;&#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#x300D;,&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#x51FA;&#x5904;,&#x8C22;&#x8C22;&#x5408;&#x4F5C;!
 </code></pre>
 <p><img src="../asset/weixin/weixin-QR-code.jpg" alt="/asset/weixin/weixin-QR-code.jpg"> </p>
 <footer class="page-footer"><span class="copyright">&#xA9; &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
-2021-08-20 08:00:11
+2021-08-23 18:17:26
 </span></footer>
                                 
                                 </section>
@@ -1342,7 +1343,7 @@
                 </a>
                 
                 
-                <a href="../aop-intergrate/aop-intergrate.html" class="navigation navigation-next " aria-label="Next page: 整合 Aop">
+                <a href="../aop-intergrate/aop-intergrate.html" class="navigation navigation-next " aria-label="Next page: 整合 AOP">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1353,7 +1354,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"默认日志管理","level":"5.1.1","depth":2,"next":{"title":"整合 Aop","level":"6.1","depth":1,"path":"aop-intergrate/aop-intergrate.md","ref":"aop-intergrate/aop-intergrate.md","articles":[]},"previous":{"title":"日志管理","level":"5.1","depth":1,"path":"log-management/log-management.md","ref":"log-management/log-management.md","articles":[{"title":"默认日志管理","level":"5.1.1","depth":2,"path":"log-management/default-log.md","ref":"log-management/default-log.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","splitter","-sharing","sharing-plus","chapter-fold","edit-link-plus","code","chart","favicon-absolute","github-buttons","advanced-emoji","copyright","tbfed-pagefooter","donate","diff","simple-mind-map","hide-element","audio_image","mermaid-gb3","baidu-tongji-with-multiple-channel","google-tongji-with-multiple-channel","icp","anchor-navigation-ex-toc","insert-logo-link-website","pageview-count","flexible-alerts","auto-scroll-table","accordion","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 悟空非空也","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"diff":{"method":"diffChars","options":{},"type":"markdown"},"baidu-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://hm.baidu.com/hm.js"},"splitter":{},"google-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://www.googletagmanager.com/gtag/js"},"copyright":{"copyProtect":false,"site":"https://wukongnotnull.github.io/spring-boot-quickstart-wukongnote/","author":"悟空非空也","website":"悟空非空也","image":"/asset/weixin/weixin-QR-code.jpg"},"accordion":{},"edit-link-plus":{"label":"编辑本页","base":"https://github.com/WuKongNotNull/spring-boot-quickstart-wukongnote/blob/main/"},"readmore":{"blogId":"27424-1628224972145-104","name":"悟空非空也","qrcode":"http://wukongnotnull.cn/asset/weixin/weixin-QR-code.jpg","keyword":"wukong"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"donate":{"alipay":"/asset/pay/ali-pay.png","alipayText":"支付宝","button":"赞 👍 赏","title":"","wechat":"/asset/pay/wechat-pay.png","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"asset/wukong-favicon.ico"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']",".copyright"]},"fontsettings":{"theme":"white","family":"sans","size":2},"audio_image":{},"sectionx":{},"highlight":{},"mermaid-gb3":{},"insert-logo-link-website":{"link":"/index.html","style":"height: 100px","target":"_self","url":"/asset/wukong-favicon.ico"},"icp":{"link":"http://www.beian.miit.gov.cn/","style":{},"number":"苏ICP备2021034291号"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"WuKongNotNull","repo":"spring-boot-quickstart-wukongnote","type":"star","size":"small"}]},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"autoFit":true,"linkShape":"diagonal","preset":"colorful","style":{},"type":"markdown"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"悟空非空也","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"悟空非空也 - SpringBoot 青铜篇","language":"zh-hans","links":{"sidebar":{"科学上网":"https://github.com/WuKongNotNull/awesome-free-vpn","JetBrains 全家桶":"https://www.bilibili.com/read/cv11463068"}},"gitbook":"*","description":"悟空非空也宝藏集,个人博客 https://wukongnotnull.com/"},"file":{"path":"log-management/default-log.md","mtime":"2021-08-20T00:00:11.849Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-20T00:21:50.261Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"默认日志管理","level":"5.1.1","depth":2,"next":{"title":"整合 AOP","level":"6.1","depth":1,"path":"aop-intergrate/aop-intergrate.md","ref":"aop-intergrate/aop-intergrate.md","articles":[]},"previous":{"title":"日志管理","level":"5.1","depth":1,"path":"log-management/log-management.md","ref":"log-management/log-management.md","articles":[{"title":"默认日志管理","level":"5.1.1","depth":2,"path":"log-management/default-log.md","ref":"log-management/default-log.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","splitter","-sharing","sharing-plus","chapter-fold","edit-link-plus","code","chart","favicon-absolute","github-buttons","advanced-emoji","copyright","tbfed-pagefooter","donate","diff","simple-mind-map","hide-element","audio_image","mermaid-gb3","baidu-tongji-with-multiple-channel","google-tongji-with-multiple-channel","icp","anchor-navigation-ex-toc","insert-logo-link-website","pageview-count","flexible-alerts","auto-scroll-table","accordion","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 悟空非空也","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"diff":{"method":"diffChars","options":{},"type":"markdown"},"baidu-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://hm.baidu.com/hm.js"},"splitter":{},"google-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://www.googletagmanager.com/gtag/js"},"copyright":{"copyProtect":false,"site":"https://wukongnotnull.github.io/spring-boot-qingtong-wukongnote/","author":"悟空非空也","website":"悟空非空也","image":"/asset/weixin/weixin-QR-code.jpg"},"accordion":{},"edit-link-plus":{"label":"编辑本页","base":"https://github.com/WuKongNotNull/spring-boot-qingtong-wukongnote/blob/main/"},"readmore":{"blogId":"27424-1628224972145-104","name":"悟空非空也","qrcode":"http://wukongnotnull.cn/asset/weixin/weixin-QR-code.jpg","keyword":"wukong"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"donate":{"alipay":"/asset/pay/ali-pay.png","alipayText":"支付宝","button":"赞 👍 赏","title":"","wechat":"/asset/pay/wechat-pay.png","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"asset/wukong-favicon.ico"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']",".copyright"]},"fontsettings":{"theme":"white","family":"sans","size":2},"audio_image":{},"sectionx":{},"highlight":{},"mermaid-gb3":{},"insert-logo-link-website":{"link":"/index.html","style":"height: 100px","target":"_self","url":"/asset/wukong-favicon.ico"},"icp":{"link":"http://www.beian.miit.gov.cn/","style":{},"number":"苏ICP备2021034291号"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"WuKongNotNull","repo":"spring-boot-qingtong-wukongnote","type":"star","size":"small"}]},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"autoFit":true,"linkShape":"diagonal","preset":"colorful","style":{},"type":"markdown"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"悟空非空也","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"悟空非空也 - SpringBoot 青铜篇","language":"zh-hans","links":{"sidebar":{"科学上网":"https://github.com/WuKongNotNull/awesome-free-vpn","JetBrains 全家桶":"https://www.bilibili.com/read/cv11463068"}},"gitbook":"*","description":"悟空非空也宝藏集,个人博客 https://wukongnotnull.com/"},"file":{"path":"log-management/default-log.md","mtime":"2021-08-23T10:17:26.987Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-23T10:30:22.101Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
