@@ -1284,56 +1284,115 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#spring-boot-&#x6574;&#x5408;&#x6570;&#x636E;&#x6821;&#x9A8C;"><b> </b>Spring Boot &#x6574;&#x5408;&#x6570;&#x636E;&#x6821;&#x9A8C;</a></li><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#springmvc-&#x6570;&#x636E;&#x6821;&#x9A8C;-validation"><b>1. </b>springMVC &#x6570;&#x636E;&#x6821;&#x9A8C; validation</a></li></ul></ul></div><a href="#spring-boot-&#x6574;&#x5408;&#x6570;&#x636E;&#x6821;&#x9A8C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="spring-boot-&#x6574;&#x5408;&#x6570;&#x636E;&#x6821;&#x9A8C;"><a name="spring-boot-&#x6574;&#x5408;&#x6570;&#x636E;&#x6821;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#spring-boot-&#x6574;&#x5408;&#x6570;&#x636E;&#x6821;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a> Spring Boot &#x6574;&#x5408;&#x6570;&#x636E;&#x6821;&#x9A8C;</h1>
-<h2 id="springmvc-&#x6570;&#x636E;&#x6821;&#x9A8C;-validation"><a name="springmvc-&#x6570;&#x636E;&#x6821;&#x9A8C;-validation" class="anchor-navigation-ex-anchor" href="#springmvc-&#x6570;&#x636E;&#x6821;&#x9A8C;-validation"><i class="fa fa-link" aria-hidden="true"></i></a>1. springMVC &#x6570;&#x636E;&#x6821;&#x9A8C; validation</h2>
-<p>&#x65E5;&#x5E38;&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x5BF9;&#x4E8E;&#x524D;&#x7AEF;&#x63D0;&#x4EA4;&#x7684;&#x8868;&#x5355;&#xFF0C;&#x540E;&#x53F0;&#x63A5;&#x53E3;&#x63A5;&#x6536;&#x5230;&#x8868;&#x5355;&#x6570;&#x636E;&#x540E;&#xFF0C;&#x4E3A;&#x4E86;&#x7A0B;&#x5E8F;&#x7684;&#x4E25;&#x8C28;&#x6027;&#xFF0C;&#x901A;&#x5E38;&#x540E;&#x7AEF;&#x4F1A;&#x52A0;&#x5165;&#x4E1A;&#x52A1;&#x53C2;&#x6570; &#x7684;&#x5408;&#x6CD5;&#x6821;&#x9A8C;&#x64CD;&#x4F5C;&#x6765;&#x907F;&#x514D;&#x7A0B;&#x5E8F;&#x7684;&#x975E;&#x6280;&#x672F;&#x6027;bug&#xFF0C;&#x8FD9;&#x91CC;&#x5BF9;&#x4E8E;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;&#x6821;&#x9A8C;&#xFF0C;SpringBoot&#x901A;&#x8FC7;spring-boot-starter-validation &#x6A21;&#x5757;&#x5305;&#x542B;&#x4E86;&#x6570;&#x636E;&#x6821;&#x9A8C;&#x7684;&#x5DE5;&#x4F5C;&#x3002; </p>
-<p>&#x76F8;&#x5173;&#x6982;&#x5FF5;&#x5982;&#x4E0B;</p>
-<p>JSR303/JSR-349: JSR303&#x662F;&#x4E00;&#x9879;&#x6807;&#x51C6;,&#x53EA;&#x63D0;&#x4F9B;&#x89C4;&#x8303;&#x4E0D;&#x63D0;&#x4F9B;&#x5B9E;&#x73B0;&#xFF0C;&#x89C4;&#x5B9A;&#x4E00;&#x4E9B;&#x6821;&#x9A8C;&#x89C4;&#x8303;&#x5373;&#x6821;&#x9A8C;&#x6CE8;&#x89E3;&#xFF0C;&#x5982;@Null&#xFF0C; @NotNull&#xFF0C;@Pattern&#xFF0C;&#x4F4D;&#x4E8E;javax.validation.constraints&#x5305;&#x4E0B;&#x3002;JSR-349&#x662F;&#x5176;&#x5347;&#x7EA7;&#x7248;&#x672C;&#xFF0C;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x65B0;&#x7279;&#x6027;&#x3002; </p>
-<p>Hibernate Validation&#xFF1A;</p>
-<p>Hibernate Validation&#x662F;&#x5BF9;&#x8FD9;&#x4E2A;&#x89C4;&#x8303;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5E76;&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x6821;&#x9A8C;&#x6CE8;&#x89E3;&#xFF0C;&#x5982;@Email&#xFF0C; @Length&#xFF0C;@Range&#x7B49;&#x7B49; &#x3002;</p>
-<p>Spring Validation&#xFF1A;Spring Validation&#x5BF9;Hibernate Validation&#x8FDB;&#x884C;&#x4E86;&#x4E8C;&#x6B21;&#x5C01;&#x88C5;&#xFF0C;&#x5728;Spring Mvc&#x6A21;&#x5757;&#x4E2D;&#x6DFB;&#x52A0;&#x4E86;&#x81EA; &#x52A8;&#x6821;&#x9A8C;&#xFF0C;&#x5E76;&#x5C06;&#x6821;&#x9A8C;&#x4FE1;&#x606F;&#x5C01;&#x88C5;&#x8FDB;&#x4E86;&#x7279;&#x5B9A;&#x7684;&#x7C7B;</p>
-<p><strong>pom</strong></p>
-<blockquote>
-<p>&#x5B9E;&#x73B0;&#x53C2;&#x6570;&#x6821;&#x9A8C;&#xFF0C;&#x7A0B;&#x5E8F;&#x5FC5;&#x987B;&#x5F15;&#x5165;spring-boot-starter-validation &#x4F9D;&#x8D56;.</p>
-<p>&#x5728;&#x7248;&#x672C;2.2.2&#x4E2D;&#xFF0C;&#x5F15;&#x5165;spring-boot-starter-web&#x4F9D;&#x8D56;&#x65F6;&#xFF0C;&#x81EA;&#x52A8;&#x5F15;&#x5165;&#x4F9D;&#x8D56;spring-boot-starter-validation&#x3002;</p>
-<p>&#x56E0;&#x4E3A; spring-boot-starter-web &#x4F9D;&#x8D56;&#x4E2D;<strong>&#x5305;&#x542B; </strong>spring-boot-starter-validation&#x3002;</p>
-<p>&#x5176;&#x4ED6;&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x5B9A;&#x5662; &#xFF0C;&#x8981;&#x81EA;&#x5DF1;&#x68C0;&#x67E5;&#x4E00;&#x4E0B;&#x54C8;&#x3002;</p>
-</blockquote>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#spring-boot-&#x6574;&#x5408;&#x6570;&#x636E;&#x6821;&#x9A8C;"><b> </b>Spring Boot &#x6574;&#x5408;&#x6570;&#x636E;&#x6821;&#x9A8C;</a></li><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#spring-mvc-&#x6570;&#x636E;&#x6821;&#x9A8C;"><b>1. </b>Spring MVC &#x6570;&#x636E;&#x6821;&#x9A8C;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x4F7F;&#x7528;&#x6848;&#x4F8B;"><b>2. </b>&#x4F7F;&#x7528;&#x6848;&#x4F8B;</a></li><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#pom-&#x4F9D;&#x8D56;"><b>2.1. </b>pom &#x4F9D;&#x8D56;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x524D;&#x7AEF;&#x9875;&#x9762;"><b>2.2. </b>&#x524D;&#x7AEF;&#x9875;&#x9762;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#user-&#x5B9E;&#x4F53;&#x7C7B;"><b>2.3. </b>User &#x5B9E;&#x4F53;&#x7C7B;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#controller"><b>2.4. </b>controller</a></li></ul></ul></ul></div><a href="#spring-boot-&#x6574;&#x5408;&#x6570;&#x636E;&#x6821;&#x9A8C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="spring-boot-&#x6574;&#x5408;&#x6570;&#x636E;&#x6821;&#x9A8C;"><a name="spring-boot-&#x6574;&#x5408;&#x6570;&#x636E;&#x6821;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#spring-boot-&#x6574;&#x5408;&#x6570;&#x636E;&#x6821;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a> Spring Boot &#x6574;&#x5408;&#x6570;&#x636E;&#x6821;&#x9A8C;</h1>
+<h2 id="spring-mvc-&#x6570;&#x636E;&#x6821;&#x9A8C;"><a name="spring-mvc-&#x6570;&#x636E;&#x6821;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#spring-mvc-&#x6570;&#x636E;&#x6821;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>1. Spring MVC &#x6570;&#x636E;&#x6821;&#x9A8C;</h2>
+<p>&#x524D;&#x7AEF;&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x6570;&#x636E;&#xFF0C;&#x88AB;&#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x63A5;&#x6536;&#x5230;&#xFF0C;&#x4E3A;&#x4E86;&#x7A0B;&#x5E8F;&#x7684;&#x4E25;&#x8C28;&#x6027;&#xFF0C;&#x540E;&#x7AEF;&#x4F1A;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6821;&#x9A8C;&#x3002;</p>
+<p><code>Spring Boot</code>  &#x901A;&#x8FC7;  <code>spring-boot-starter-validation</code>  &#x6A21;&#x5757;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6821;&#x9A8C;&#x7684;&#x5DE5;&#x4F5C;&#x3002; </p>
+<p><strong>JSR303/JSR-349</strong></p>
+<p><code>JSR303</code> &#x662F;&#x4E00;&#x9879;&#x6807;&#x51C6;,&#x53EA;&#x63D0;&#x4F9B;&#x89C4;&#x8303;&#x4E0D;&#x63D0;&#x4F9B;&#x5B9E;&#x73B0;&#xFF0C;&#x89C4;&#x5B9A;&#x4E00;&#x4E9B;&#x6821;&#x9A8C;&#x89C4;&#x8303;&#x5373;&#x6821;&#x9A8C;&#x6CE8;&#x89E3;&#xFF0C;&#x5982; <code>@Null</code> &#xFF0C; <code>@NotNull</code> &#xFF0C; <code>@Pattern</code> &#xFF0C;&#x4F4D;&#x4E8E;<code>javax.validation.constraints</code> &#x5305;&#x4E0B;&#x3002;</p>
+<p>JSR-349&#x662F;&#x5176;&#x5347;&#x7EA7;&#x7248;&#x672C;&#xFF0C;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x65B0;&#x7279;&#x6027;&#x3002;</p>
+<p><strong>Hibernate Validation&#xFF1A;</strong></p>
+<p><code>Hibernate Validation</code>  &#x662F;&#x5BF9;&#x8FD9;&#x4E2A;&#x89C4;&#x8303;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5E76;&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x6821;&#x9A8C;&#x6CE8;&#x89E3;&#xFF0C;&#x5982;<code>@Email</code>&#xFF0C; <code>@Length</code>&#xFF0C;<code>@Range</code> &#x7B49;&#x7B49; &#x3002;</p>
+<p><code>Spring Validation</code> &#x5BF9; <code>Hibernate Validation</code> &#x8FDB;&#x884C;&#x4E86;&#x4E8C;&#x6B21;&#x5C01;&#x88C5;&#xFF0C;&#x5728; <code>Spring MVC</code> &#x6A21;&#x5757;&#x4E2D;&#x6DFB;&#x52A0;&#x81EA;&#x52A8;&#x6821;&#x9A8C;&#xFF0C;&#x5E76;&#x5C06;&#x6821;&#x9A8C;&#x4FE1;&#x606F;&#x5C01;&#x88C5;&#x8FDB;&#x7279;&#x5B9A;&#x7684;&#x7C7B;&#x4E2D;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;&#x6848;&#x4F8B;"><a name="&#x4F7F;&#x7528;&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x4F7F;&#x7528;&#x6848;&#x4F8B;</h2>
+<h3 id="pom-&#x4F9D;&#x8D56;"><a name="pom-&#x4F9D;&#x8D56;" class="anchor-navigation-ex-anchor" href="#pom-&#x4F9D;&#x8D56;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. pom &#x4F9D;&#x8D56;</h3>
 <pre><code class="lang-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-validation<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
 </code></pre>
-<p><strong>user &#x5B9E;&#x4F53;&#x7C7B;</strong></p>
-<pre><code class="lang-java"><span class="hljs-keyword">import</span> org.hibernate.validator.constraints.Length;
+<p><br></p>
+<h3 id="&#x524D;&#x7AEF;&#x9875;&#x9762;"><a name="&#x524D;&#x7AEF;&#x9875;&#x9762;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x7AEF;&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x524D;&#x7AEF;&#x9875;&#x9762;</h3>
+<blockquote>
+<p>&#x521B;&#x5EFA; <code>registerUser.html</code> </p>
+<blockquote>
+<p>&#x8BB0;&#x5F97;&#x5F15;&#x5165; <code>spring-boot-starter-thymeleaf</code> &#x4F9D;&#x8D56;  </p>
+</blockquote>
+</blockquote>
+<pre><code class="lang-html">  <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/addUser&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x7528;&#x6237;&#x540D;&#xFF1A;<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x5BC6;&#x7801;&#xFF1A;<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#x6CE8;&#x518C;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<p><br></p>
+<h3 id="user-&#x5B9E;&#x4F53;&#x7C7B;"><a name="user-&#x5B9E;&#x4F53;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#user-&#x5B9E;&#x4F53;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. User &#x5B9E;&#x4F53;&#x7C7B;</h3>
+<blockquote>
+<p>&#x5C5E;&#x6027;&#x4E0A;&#x6DFB;&#x52A0;&#x5BF9;&#x5E94;&#x6821;&#x9A8C;&#x6CE8;&#x89E3;&#xFF0C;&#x6BD4;&#x5982; <code>@NotBlank</code> &#xFF0C;<code>@Length</code> &#xFF0C;<code>@NotBlank</code>  &#x3002;</p>
+<p>&#x8865;&#x5145;&#xFF1A;</p>
+<blockquote>
+<p>@Data  //&#x8BB0;&#x5F97;&#x5F15;&#x5165; lombok &#x4F9D;&#x8D56;</p>
+</blockquote>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.wukongnotnull;
+<span class="hljs-comment">//author: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#xFF08;B&#x7AD9;/&#x77E5;&#x4E4E;/&#x516C;&#x4F17;&#x53F7;&#xFF09;</span>
+
+<span class="hljs-keyword">import</span> org.hibernate.validator.constraints.Length;
+
+
 <span class="hljs-keyword">import</span> javax.validation.constraints.NotBlank;
-
-
+<span class="hljs-keyword">import</span> java.io.Serializable;
+<span class="hljs-meta">@Data</span>  <span class="hljs-comment">//&#x8BB0;&#x5F97;&#x5F15;&#x5165; lombok &#x4F9D;&#x8D56;</span>
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Serializable</span> </span>{
 
-    <span class="hljs-keyword">private</span> Integer id;
+    <span class="hljs-keyword">private</span>  Integer id;
+    <span class="hljs-meta">@NotBlank</span>(message = <span class="hljs-string">&quot;&#x7528;&#x6237;&#x540D;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;</span>)
+    <span class="hljs-keyword">private</span>  String username;
+
+    <span class="hljs-meta">@Length</span>(min=<span class="hljs-number">3</span>,max=<span class="hljs-number">10</span>,message = <span class="hljs-string">&quot;&#x5BC6;&#x7801;&#x957F;&#x5EA6;&#x4E3A;3-10&#x4E4B;&#x95F4;&quot;</span>)
+    <span class="hljs-meta">@NotBlank</span>(message = <span class="hljs-string">&quot;&#x5BC6;&#x7801;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;</span>)
+    <span class="hljs-keyword">private</span>  String password;
 
 
-    <span class="hljs-meta">@NotBlank</span>(message =<span class="hljs-string">&quot;&#x7528;&#x6237;&#x540D;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x54C8;&quot;</span>)
-    <span class="hljs-keyword">private</span> String username;
-
-
-    <span class="hljs-meta">@Length</span>(min =<span class="hljs-number">1</span> ,max = <span class="hljs-number">10</span>,message = <span class="hljs-string">&quot;&#x5BC6;&#x7801;&#x957F;&#x5EA6;&#x4E3A;1~10&#x4E4B;&#x95F4;&#x54C8;&quot;</span>)
-    <span class="hljs-meta">@NotBlank</span>(message = <span class="hljs-string">&quot;&#x7528;&#x6237;&#x5BC6;&#x7801;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;!&quot;</span>)
-    <span class="hljs-keyword">private</span> String password;
-</code></pre>
-<p><strong>controller</strong></p>
-<pre><code class="lang-java"><span class="hljs-keyword">import</span> org.springframework.validation.annotation.Validated;
-
-<span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">addUser02</span><span class="hljs-params">(@Validated User user)</span></span>{
-    ResultInfo resultInfo = <span class="hljs-keyword">new</span> ResultInfo();
-    <span class="hljs-keyword">this</span>.userService.addUser(user);
-
-    <span class="hljs-keyword">return</span> resultInfo;
 }
 </code></pre>
-<p><br><br></p>
+<p><br></p>
+<h3 id="controller"><a name="controller" class="anchor-navigation-ex-anchor" href="#controller"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. controller</h3>
+<blockquote>
+<p>&#x5F62;&#x53C2;&#x524D;&#x6DFB;&#x52A0; <code>@Validated</code> &#x6216;&#x8005; <code>@Valid</code></p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.wukongnotnull.controller;
+
+<span class="hljs-keyword">import</span> com.wukongnotnull.User;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Controller;
+<span class="hljs-keyword">import</span> org.springframework.validation.BindingResult;
+<span class="hljs-keyword">import</span> org.springframework.validation.annotation.Validated;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.*;
+
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-comment">//author: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#xFF08;B&#x7AD9;/&#x77E5;&#x4E4E;/&#x516C;&#x4F17;&#x53F7;&#xFF09;</span>
+<span class="hljs-meta">@Controller</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserController</span> </span>{
+
+    <span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">&quot;/register&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">showRegisterPage</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;registerUser&quot;</span>;
+    }
+
+
+    <span class="hljs-comment">// &#x6DFB;&#x52A0;&#x6CE8;&#x89E3; @Valid &#x6216;&#x8005; @Validated &#x5747;&#x53EF;&#x4EE5;</span>
+    <span class="hljs-comment">// BindingResult &#x7528;&#x4E8E;&#x63A5;&#x6536;&#x6570;&#x636E;&#x6821;&#x9A8C;&#x5931;&#x8D25;&#x7684;&#x63D0;&#x793A;&#x4FE1;&#x606F;</span>
+    <span class="hljs-meta">@PostMapping</span>(value = <span class="hljs-string">&quot;/addUser&quot;</span>)
+    <span class="hljs-meta">@ResponseBody</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">addUser</span><span class="hljs-params">(@Validated User user , BindingResult bindingResult)</span></span>{
+        List&lt;Object&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">if</span> (bindingResult.hasErrors()) {
+            bindingResult.getAllErrors().forEach(e -&gt;{
+                list.add(e.getDefaultMessage());
+            });
+        }<span class="hljs-keyword">else</span> {
+            list.add(<span class="hljs-string">&quot;&#x540E;&#x7AEF;&#x6570;&#x636E;&#x6821;&#x9A8C;&#x6210;&#x529F;&quot;</span>);
+        }
+        <span class="hljs-keyword">return</span> list;
+    }
+
+
+}
+</code></pre>
+<p><br><br><br></p>
 <pre><code class="lang-html">&#x4F5C;&#x8005;: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;
 &#x94FE;&#x63A5;: https://wukongnotnull.github.io/spring-boot-qingtong-wukongnote/web-dev/mvc-validation.html
 &#x6765;&#x6E90;: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;
@@ -1341,7 +1400,7 @@
 </code></pre>
 <p><img src="../asset/weixin/weixin-QR-code.jpg" alt="/asset/weixin/weixin-QR-code.jpg"> </p>
 <footer class="page-footer"><span class="copyright">&#xA9; &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
-2021-08-23 18:25:51
+2021-08-27 17:46:58
 </span></footer>
                                 
                                 </section>
@@ -1385,7 +1444,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数据校验 Validation","level":"9.1.2","depth":2,"next":{"title":"全局异常处理","level":"9.1.3","depth":2,"path":"web-dev/global-exception.md","ref":"web-dev/global-exception.md","articles":[]},"previous":{"title":"整合 MVC 和拦截器","level":"9.1.1","depth":2,"path":"web-dev/integrate-mvc.md","ref":"web-dev/integrate-mvc.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","splitter","-sharing","sharing-plus","chapter-fold","edit-link-plus","code","chart","favicon-absolute","github-buttons","advanced-emoji","copyright","tbfed-pagefooter","donate","diff","simple-mind-map","hide-element","audio_image","mermaid-gb3","baidu-tongji-with-multiple-channel","google-tongji-with-multiple-channel","icp","anchor-navigation-ex-toc","insert-logo-link-website","pageview-count","flexible-alerts","auto-scroll-table","accordion","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 悟空非空也","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"diff":{"method":"diffChars","options":{},"type":"markdown"},"baidu-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://hm.baidu.com/hm.js"},"splitter":{},"google-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://www.googletagmanager.com/gtag/js"},"copyright":{"copyProtect":false,"site":"https://wukongnotnull.github.io/spring-boot-qingtong-wukongnote/","author":"悟空非空也","website":"悟空非空也","image":"/asset/weixin/weixin-QR-code.jpg"},"accordion":{},"edit-link-plus":{"label":"编辑本页","base":"https://github.com/WuKongNotNull/spring-boot-qingtong-wukongnote/blob/main/"},"readmore":{"blogId":"27424-1628224972145-104","name":"悟空非空也","qrcode":"http://wukongnotnull.cn/asset/weixin/weixin-QR-code.jpg","keyword":"wukong"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"donate":{"alipay":"/asset/pay/ali-pay.png","alipayText":"支付宝","button":"赞 👍 赏","title":"","wechat":"/asset/pay/wechat-pay.png","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"asset/wukong-favicon.ico"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']",".copyright"]},"fontsettings":{"theme":"white","family":"sans","size":2},"audio_image":{},"sectionx":{},"highlight":{},"mermaid-gb3":{},"insert-logo-link-website":{"link":"/index.html","style":"height: 100px","target":"_self","url":"/asset/wukong-favicon.ico"},"icp":{"link":"http://www.beian.miit.gov.cn/","style":{},"number":"苏ICP备2021034291号"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"WuKongNotNull","repo":"spring-boot-qingtong-wukongnote","type":"star","size":"small"}]},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"autoFit":true,"linkShape":"diagonal","preset":"colorful","style":{},"type":"markdown"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"悟空非空也","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"悟空非空也 - SpringBoot 青铜篇","language":"zh-hans","links":{"sidebar":{"科学上网":"https://github.com/WuKongNotNull/awesome-free-vpn","JetBrains 全家桶":"https://www.bilibili.com/read/cv11463068"}},"gitbook":"*","description":"悟空非空也宝藏集,个人博客 https://wukongnotnull.com/"},"file":{"path":"web-dev/mvc-validation.md","mtime":"2021-08-23T10:25:51.684Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-23T10:30:22.101Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数据校验 Validation","level":"9.1.2","depth":2,"next":{"title":"全局异常处理","level":"9.1.3","depth":2,"path":"web-dev/global-exception.md","ref":"web-dev/global-exception.md","articles":[]},"previous":{"title":"整合 MVC 和拦截器","level":"9.1.1","depth":2,"path":"web-dev/integrate-mvc.md","ref":"web-dev/integrate-mvc.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","splitter","-sharing","sharing-plus","chapter-fold","edit-link-plus","code","chart","favicon-absolute","github-buttons","advanced-emoji","copyright","tbfed-pagefooter","donate","diff","simple-mind-map","hide-element","audio_image","mermaid-gb3","baidu-tongji-with-multiple-channel","google-tongji-with-multiple-channel","icp","anchor-navigation-ex-toc","insert-logo-link-website","pageview-count","flexible-alerts","auto-scroll-table","accordion","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 悟空非空也","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"diff":{"method":"diffChars","options":{},"type":"markdown"},"baidu-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://hm.baidu.com/hm.js"},"splitter":{},"google-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://www.googletagmanager.com/gtag/js"},"copyright":{"copyProtect":false,"site":"https://wukongnotnull.github.io/spring-boot-qingtong-wukongnote/","author":"悟空非空也","website":"悟空非空也","image":"/asset/weixin/weixin-QR-code.jpg"},"accordion":{},"edit-link-plus":{"label":"编辑本页","base":"https://github.com/WuKongNotNull/spring-boot-qingtong-wukongnote/blob/main/"},"readmore":{"blogId":"27424-1628224972145-104","name":"悟空非空也","qrcode":"http://wukongnotnull.cn/asset/weixin/weixin-QR-code.jpg","keyword":"wukong"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"donate":{"alipay":"/asset/pay/ali-pay.png","alipayText":"支付宝","button":"赞 👍 赏","title":"","wechat":"/asset/pay/wechat-pay.png","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"asset/wukong-favicon.ico"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']",".copyright"]},"fontsettings":{"theme":"white","family":"sans","size":2},"audio_image":{},"sectionx":{},"highlight":{},"mermaid-gb3":{},"insert-logo-link-website":{"link":"/index.html","style":"height: 100px","target":"_self","url":"/asset/wukong-favicon.ico"},"icp":{"link":"http://www.beian.miit.gov.cn/","style":{},"number":"苏ICP备2021034291号"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"WuKongNotNull","repo":"spring-boot-qingtong-wukongnote","type":"star","size":"small"}]},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"autoFit":true,"linkShape":"diagonal","preset":"colorful","style":{},"type":"markdown"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"悟空非空也","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"悟空非空也 - SpringBoot 青铜篇","language":"zh-hans","links":{"sidebar":{"科学上网":"https://github.com/WuKongNotNull/awesome-free-vpn","JetBrains 全家桶":"https://www.bilibili.com/read/cv11463068"}},"gitbook":"*","description":"悟空非空也宝藏集,个人博客 https://wukongnotnull.com/"},"file":{"path":"web-dev/mvc-validation.md","mtime":"2021-08-27T09:46:58.964Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-27T09:52:28.246Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
