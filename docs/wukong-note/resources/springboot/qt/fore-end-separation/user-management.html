@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>用户管理 CRUD · 悟空非空也 - SpringBoot 青铜篇</title>
+        <title>用户模块管理 CRUD · 悟空非空也 - SpringBoot 青铜篇</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -127,7 +127,7 @@
     <link rel="next" href="../Integrated-swagger/integrated-swagger.html" />
     
     
-    <link rel="prev" href="argument-resolve.html" />
+    <link rel="prev" href="response-result.html" />
     
 
     <style>
@@ -768,20 +768,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="6.1.1" >
-            
-                <span>
-            
-                    
-                    postman
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.1.2" data-path="interface-design.html">
+        <li class="chapter " data-level="6.1.1" data-path="interface-design.html">
             
                 <a href="interface-design.html">
             
@@ -794,20 +781,46 @@
             
         </li>
     
-        <li class="chapter " data-level="6.1.3" >
+        <li class="chapter " data-level="6.1.2" data-path="response-result.html">
             
-                <span>
+                <a href="response-result.html">
             
                     
-                    统一响应结果
+                    统一响应结果的设计
             
-                </span>
+                </a>
             
 
             
         </li>
     
-        <li class="chapter " data-level="6.1.4" data-path="cors.html">
+        <li class="chapter active" data-level="6.1.3" data-path="user-management.html">
+            
+                <a href="user-management.html">
+            
+                    
+                    用户模块管理 CRUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../Integrated-swagger/integrated-swagger.html">
+            
+                <a href="../Integrated-swagger/integrated-swagger.html">
+            
+                    
+                    Api文档框架 Swagger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="cors.html">
             
                 <a href="cors.html">
             
@@ -820,7 +833,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.1.5" data-path="token-login.html">
+        <li class="chapter " data-level="6.1.6" data-path="token-login.html">
             
                 <a href="token-login.html">
             
@@ -833,7 +846,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.1.6" data-path="token-authorization.html">
+        <li class="chapter " data-level="6.1.7" data-path="token-authorization.html">
             
                 <a href="token-authorization.html">
             
@@ -846,38 +859,12 @@
             
         </li>
     
-        <li class="chapter " data-level="6.1.7" data-path="argument-resolve.html">
+        <li class="chapter " data-level="6.1.8" data-path="argument-resolve.html">
             
                 <a href="argument-resolve.html">
             
                     
                     自定义参数解析
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="6.1.8" data-path="user-management.html">
-            
-                <a href="user-management.html">
-            
-                    
-                    用户管理 CRUD
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.1.9" data-path="../Integrated-swagger/integrated-swagger.html">
-            
-                <a href="../Integrated-swagger/integrated-swagger.html">
-            
-                    
-                    Api文档 Swagger
             
                 </a>
             
@@ -1220,7 +1207,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >用户管理 CRUD</a>
+        <a href=".." >用户模块管理 CRUD</a>
     </h1>
 </div>
 
@@ -1235,7 +1222,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x96C6;&#x6210;mybatis"><a name="&#x96C6;&#x6210;mybatis" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x6210;mybatis"><i class="fa fa-link" aria-hidden="true"></i></a>&#x96C6;&#x6210;mybatis</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x7528;&#x6237;&#x6A21;&#x5757;&#x7BA1;&#x7406;"><b> </b>&#x7528;&#x6237;&#x6A21;&#x5757;&#x7BA1;&#x7406;</a></li><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x96C6;&#x6210;mybatis"><b>1. </b>&#x96C6;&#x6210;mybatis</a></li><ul><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;"><b>1.1. </b>&#x9700;&#x6C42;&#xFF1A; &#x6839;&#x636E;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;id&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;"><b>1.2. </b>&#x9700;&#x6C42;&#xFF1A; &#x6839;&#x636E;id&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x9700;&#x6C42;&#xFF1A;-&#x6DFB;&#x52A0;&#x7528;&#x6237;"><b>1.3. </b>&#x9700;&#x6C42;&#xFF1A; &#x6DFB;&#x52A0;&#x7528;&#x6237;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x9700;&#x6C42;&#xFF1A;-&#x4FEE;&#x6539;&#x7528;&#x6237;"><b>1.4. </b>&#x9700;&#x6C42;&#xFF1A; &#x4FEE;&#x6539;&#x7528;&#x6237;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x9700;&#x6C42;&#xFF1A;-&#x5220;&#x9664;&#x7528;&#x6237;"><b>1.5. </b>&#x9700;&#x6C42;&#xFF1A; &#x5220;&#x9664;&#x7528;&#x6237;</a></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#&#x9700;&#x6C42;&#xFF1A;-&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x5206;&#x9875;&#x5217;&#x8868;"><b>1.6. </b>&#x9700;&#x6C42;&#xFF1A; &#x67E5;&#x8BE2;&#x7528;&#x6237;&#x5206;&#x9875;&#x5217;&#x8868;</a></li></ul></ul></ul></div><a href="#&#x7528;&#x6237;&#x6A21;&#x5757;&#x7BA1;&#x7406;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div id="anchor-navigation-ex-pagetop-navbar"><ul><li><span class="title-icon "></span><a href="#&#x7528;&#x6237;&#x6A21;&#x5757;&#x7BA1;&#x7406;"><b> </b>&#x7528;&#x6237;&#x6A21;&#x5757;&#x7BA1;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#&#x96C6;&#x6210;mybatis"><b>1. </b>&#x96C6;&#x6210;mybatis</a></li><ul><li><span class="title-icon "></span><a href="#&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;"><b>1.1. </b>&#x9700;&#x6C42;&#xFF1A; &#x6839;&#x636E;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;</a></li><li><span class="title-icon "></span><a href="#&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;id&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;"><b>1.2. </b>&#x9700;&#x6C42;&#xFF1A; &#x6839;&#x636E;id&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;</a></li><li><span class="title-icon "></span><a href="#&#x9700;&#x6C42;&#xFF1A;-&#x6DFB;&#x52A0;&#x7528;&#x6237;"><b>1.3. </b>&#x9700;&#x6C42;&#xFF1A; &#x6DFB;&#x52A0;&#x7528;&#x6237;</a></li><li><span class="title-icon "></span><a href="#&#x9700;&#x6C42;&#xFF1A;-&#x4FEE;&#x6539;&#x7528;&#x6237;"><b>1.4. </b>&#x9700;&#x6C42;&#xFF1A; &#x4FEE;&#x6539;&#x7528;&#x6237;</a></li><li><span class="title-icon "></span><a href="#&#x9700;&#x6C42;&#xFF1A;-&#x5220;&#x9664;&#x7528;&#x6237;"><b>1.5. </b>&#x9700;&#x6C42;&#xFF1A; &#x5220;&#x9664;&#x7528;&#x6237;</a></li><li><span class="title-icon "></span><a href="#&#x9700;&#x6C42;&#xFF1A;-&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x5206;&#x9875;&#x5217;&#x8868;"><b>1.6. </b>&#x9700;&#x6C42;&#xFF1A; &#x67E5;&#x8BE2;&#x7528;&#x6237;&#x5206;&#x9875;&#x5217;&#x8868;</a></li></ul></ul></ul></div>
+
+<h1 id="&#x7528;&#x6237;&#x6A21;&#x5757;&#x7BA1;&#x7406;"><a name="&#x7528;&#x6237;&#x6A21;&#x5757;&#x7BA1;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x6237;&#x6A21;&#x5757;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x7528;&#x6237;&#x6A21;&#x5757;&#x7BA1;&#x7406;</h1>
+<h2 id="&#x96C6;&#x6210;mybatis"><a name="&#x96C6;&#x6210;mybatis" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x6210;mybatis"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x96C6;&#x6210;mybatis</h2>
 <blockquote>
 <p>springboot 2.x &#x9ED8;&#x8BA4;&#x6570;&#x636E;&#x6E90;&#x662F;  Hikari</p>
 </blockquote>
@@ -1304,7 +1294,7 @@ pagehelper:
     }
 }
 </code></pre>
-<h3 id="&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;"><a name="&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;" class="anchor-navigation-ex-anchor" href="#&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9700;&#x6C42;&#xFF1A; &#x6839;&#x636E;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;</h3>
+<h3 id="&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;"><a name="&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;" class="anchor-navigation-ex-anchor" href="#&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x9700;&#x6C42;&#xFF1A; &#x6839;&#x636E;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;</h3>
 <blockquote>
 <p> user&#x8868;&#x4E2D; id &#x548C; username &#x90FD;&#x8981;&#x6C42;&#x552F;&#x4E00;&#x6027;</p>
 </blockquote>
@@ -1366,7 +1356,7 @@ public interface UserMapper {
 
 }
 </code></pre>
-<h3 id="&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;id&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;"><a name="&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;id&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;" class="anchor-navigation-ex-anchor" href="#&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;id&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9700;&#x6C42;&#xFF1A; &#x6839;&#x636E;id&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;</h3>
+<h3 id="&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;id&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;"><a name="&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;id&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;" class="anchor-navigation-ex-anchor" href="#&#x9700;&#x6C42;&#xFF1A;-&#x6839;&#x636E;id&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x9700;&#x6C42;&#xFF1A; &#x6839;&#x636E;id&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x7528;&#x6237;</h3>
 <blockquote>
 <p> &#x4E0A;&#x8FF0;&#x9700;&#x6C42;&#x548C;&#x672C;&#x9700;&#x6C42;&#x90FD;&#x662F;get&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;&#xFF0C;&#x8981;&#x7559;&#x610F;&#x8BF7;&#x6C42;&#x8DEF;&#x5F84;&#x7684;&#x533A;&#x5206;&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x62A5;&#x9519;</p>
 </blockquote>
@@ -1390,7 +1380,7 @@ public interface UserMapper {
     }
 }
 </code></pre>
-<h3 id="&#x9700;&#x6C42;&#xFF1A;-&#x6DFB;&#x52A0;&#x7528;&#x6237;"><a name="&#x9700;&#x6C42;&#xFF1A;-&#x6DFB;&#x52A0;&#x7528;&#x6237;" class="anchor-navigation-ex-anchor" href="#&#x9700;&#x6C42;&#xFF1A;-&#x6DFB;&#x52A0;&#x7528;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9700;&#x6C42;&#xFF1A; &#x6DFB;&#x52A0;&#x7528;&#x6237;</h3>
+<h3 id="&#x9700;&#x6C42;&#xFF1A;-&#x6DFB;&#x52A0;&#x7528;&#x6237;"><a name="&#x9700;&#x6C42;&#xFF1A;-&#x6DFB;&#x52A0;&#x7528;&#x6237;" class="anchor-navigation-ex-anchor" href="#&#x9700;&#x6C42;&#xFF1A;-&#x6DFB;&#x52A0;&#x7528;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x9700;&#x6C42;&#xFF1A; &#x6DFB;&#x52A0;&#x7528;&#x6237;</h3>
 <blockquote>
 <p>&#x8981;&#x6C42;&#xFF1A;</p>
 <p>&#x6DFB;&#x52A0;&#x7528;&#x6237;&#x5B57;&#x6BB5; &#x975E;&#x7A7A;</p>
@@ -1564,7 +1554,7 @@ public interface UserMapper {
    }
 </code></pre>
 <p><strong>postman &#x8FDB;&#x884C;&#x6D4B;&#x8BD5;</strong></p>
-<h3 id="&#x9700;&#x6C42;&#xFF1A;-&#x4FEE;&#x6539;&#x7528;&#x6237;"><a name="&#x9700;&#x6C42;&#xFF1A;-&#x4FEE;&#x6539;&#x7528;&#x6237;" class="anchor-navigation-ex-anchor" href="#&#x9700;&#x6C42;&#xFF1A;-&#x4FEE;&#x6539;&#x7528;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9700;&#x6C42;&#xFF1A; &#x4FEE;&#x6539;&#x7528;&#x6237;</h3>
+<h3 id="&#x9700;&#x6C42;&#xFF1A;-&#x4FEE;&#x6539;&#x7528;&#x6237;"><a name="&#x9700;&#x6C42;&#xFF1A;-&#x4FEE;&#x6539;&#x7528;&#x6237;" class="anchor-navigation-ex-anchor" href="#&#x9700;&#x6C42;&#xFF1A;-&#x4FEE;&#x6539;&#x7528;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x9700;&#x6C42;&#xFF1A; &#x4FEE;&#x6539;&#x7528;&#x6237;</h3>
 <blockquote>
 <p>&#x8981;&#x6C42;&#xFF1A; </p>
 <p>id&#x5B57;&#x6BB5; &#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x3002;</p>
@@ -1614,7 +1604,7 @@ public interface UserMapper {
        <span class="hljs-keyword">return</span>  resultInfo;
    }
 </code></pre>
-<h3 id="&#x9700;&#x6C42;&#xFF1A;-&#x5220;&#x9664;&#x7528;&#x6237;"><a name="&#x9700;&#x6C42;&#xFF1A;-&#x5220;&#x9664;&#x7528;&#x6237;" class="anchor-navigation-ex-anchor" href="#&#x9700;&#x6C42;&#xFF1A;-&#x5220;&#x9664;&#x7528;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9700;&#x6C42;&#xFF1A; &#x5220;&#x9664;&#x7528;&#x6237;</h3>
+<h3 id="&#x9700;&#x6C42;&#xFF1A;-&#x5220;&#x9664;&#x7528;&#x6237;"><a name="&#x9700;&#x6C42;&#xFF1A;-&#x5220;&#x9664;&#x7528;&#x6237;" class="anchor-navigation-ex-anchor" href="#&#x9700;&#x6C42;&#xFF1A;-&#x5220;&#x9664;&#x7528;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x9700;&#x6C42;&#xFF1A; &#x5220;&#x9664;&#x7528;&#x6237;</h3>
 <p><strong>dao &amp; sql &#x6620;&#x5C04;&#x8BED;&#x53E5;</strong></p>
 <pre><code class="lang-xml">  public  int deleteUser(Integer id);
 </code></pre>
@@ -1654,7 +1644,7 @@ public interface UserMapper {
        <span class="hljs-keyword">return</span> resultInfo;
    }
 </code></pre>
-<h3 id="&#x9700;&#x6C42;&#xFF1A;-&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x5206;&#x9875;&#x5217;&#x8868;"><a name="&#x9700;&#x6C42;&#xFF1A;-&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x5206;&#x9875;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x9700;&#x6C42;&#xFF1A;-&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x5206;&#x9875;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9700;&#x6C42;&#xFF1A; &#x67E5;&#x8BE2;&#x7528;&#x6237;&#x5206;&#x9875;&#x5217;&#x8868;</h3>
+<h3 id="&#x9700;&#x6C42;&#xFF1A;-&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x5206;&#x9875;&#x5217;&#x8868;"><a name="&#x9700;&#x6C42;&#xFF1A;-&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x5206;&#x9875;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x9700;&#x6C42;&#xFF1A;-&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x5206;&#x9875;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x9700;&#x6C42;&#xFF1A; &#x67E5;&#x8BE2;&#x7528;&#x6237;&#x5206;&#x9875;&#x5217;&#x8868;</h3>
 <p><strong>&#x5750;&#x6807;</strong></p>
 <pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.github.pagehelper<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
@@ -1739,9 +1729,9 @@ public interface UserMapper {
 &#x6765;&#x6E90;: &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;
 &#x672C;&#x6587;&#x539F;&#x521B;&#x53D1;&#x5E03;&#x4E8E;&#x300C;&#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F;&#x300D;,&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#x51FA;&#x5904;,&#x8C22;&#x8C22;&#x5408;&#x4F5C;!
 </code></pre>
-<p><img src="../asset/weixin/weixin-QR-code.jpg" alt="/asset/weixin/weixin-QR-code.jpg"> </p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gu0dga76xrj61bi0hcgnn02.jpg" alt="https://tva1.sinaimg.cn/large/008i3skNgy1gu0dga76xrj61bi0hcgnn02.jpg"> </p>
 <footer class="page-footer"><span class="copyright">&#xA9; &#x609F;&#x7A7A;&#x975E;&#x7A7A;&#x4E5F; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
-2021-08-20 08:00:11
+2021-09-01 00:09:39
 </span></footer>
                                 
                                 </section>
@@ -1769,12 +1759,12 @@ public interface UserMapper {
 
             
                 
-                <a href="argument-resolve.html" class="navigation navigation-prev " aria-label="Previous page: 自定义参数解析">
+                <a href="response-result.html" class="navigation navigation-prev " aria-label="Previous page: 统一响应结果的设计">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../Integrated-swagger/integrated-swagger.html" class="navigation navigation-next " aria-label="Next page: Api文档 Swagger">
+                <a href="../Integrated-swagger/integrated-swagger.html" class="navigation navigation-next " aria-label="Next page: Api文档框架 Swagger">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1785,7 +1775,7 @@ public interface UserMapper {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"用户管理 CRUD","level":"6.1.8","depth":2,"next":{"title":"Api文档 Swagger","level":"6.1.9","depth":2,"path":"Integrated-swagger/integrated-swagger.md","ref":"Integrated-swagger/integrated-swagger.md","articles":[]},"previous":{"title":"自定义参数解析","level":"6.1.7","depth":2,"path":"fore-end-separation/argument-resolve.md","ref":"fore-end-separation/argument-resolve.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","splitter","-sharing","sharing-plus","chapter-fold","edit-link-plus","code","chart","favicon-absolute","github-buttons","advanced-emoji","copyright","tbfed-pagefooter","donate","diff","simple-mind-map","hide-element","audio_image","mermaid-gb3","baidu-tongji-with-multiple-channel","google-tongji-with-multiple-channel","icp","anchor-navigation-ex-toc","insert-logo-link-website","pageview-count","flexible-alerts","auto-scroll-table","accordion","sectionx","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 悟空非空也","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"diff":{"method":"diffChars","options":{},"type":"markdown"},"livereload":{},"baidu-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://hm.baidu.com/hm.js"},"splitter":{},"google-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://www.googletagmanager.com/gtag/js"},"copyright":{"copyProtect":false,"site":"https://wukongnotnull.github.io/spring-boot-qingtong-wukongnote/","author":"悟空非空也","website":"悟空非空也","image":"/asset/weixin/weixin-QR-code.jpg"},"accordion":{},"edit-link-plus":{"label":"编辑本页","base":"https://github.com/WuKongNotNull/spring-boot-qingtong-wukongnote/blob/main/"},"readmore":{"blogId":"27424-1628224972145-104","name":"悟空非空也","qrcode":"http://wukongnotnull.cn/asset/weixin/weixin-QR-code.jpg","keyword":"wukong"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"donate":{"alipay":"/asset/pay/ali-pay.png","alipayText":"支付宝","button":"赞 👍 赏","title":"","wechat":"/asset/pay/wechat-pay.png","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"asset/wukong-favicon.ico"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']",".copyright"]},"fontsettings":{"theme":"white","family":"sans","size":2},"audio_image":{},"sectionx":{},"highlight":{},"mermaid-gb3":{},"insert-logo-link-website":{"link":"/index.html","style":"height: 100px","target":"_self","url":"/asset/wukong-favicon.ico"},"icp":{"link":"http://www.beian.miit.gov.cn/","style":{},"number":"苏ICP备2021034291号"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"WuKongNotNull","repo":"spring-boot-qingtong-wukongnote","type":"star","size":"small"}]},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"autoFit":true,"linkShape":"diagonal","preset":"colorful","style":{},"type":"markdown"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"悟空非空也","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"悟空非空也 - SpringBoot 青铜篇","language":"zh-hans","links":{"sidebar":{"科学上网":"https://github.com/WuKongNotNull/awesome-free-vpn","JetBrains 全家桶":"https://www.bilibili.com/read/cv11463068"}},"gitbook":"*","description":"悟空非空也宝藏集,个人博客 https://wukongnotnull.com/"},"file":{"path":"fore-end-separation/user-management.md","mtime":"2021-08-20T00:00:11.577Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-29T13:22:14.435Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"用户模块管理 CRUD","level":"6.1.3","depth":2,"next":{"title":"Api文档框架 Swagger","level":"6.1.4","depth":2,"path":"Integrated-swagger/integrated-swagger.md","ref":"Integrated-swagger/integrated-swagger.md","articles":[]},"previous":{"title":"统一响应结果的设计","level":"6.1.2","depth":2,"path":"fore-end-separation/response-result.md","ref":"fore-end-separation/response-result.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","splitter","-sharing","sharing-plus","chapter-fold","edit-link-plus","code","chart","favicon-absolute","github-buttons","advanced-emoji","copyright","tbfed-pagefooter","donate","diff","simple-mind-map","hide-element","audio_image","mermaid-gb3","baidu-tongji-with-multiple-channel","google-tongji-with-multiple-channel","icp","anchor-navigation-ex-toc","insert-logo-link-website","pageview-count","flexible-alerts","auto-scroll-table","accordion","sectionx","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 悟空非空也","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"diff":{"method":"diffChars","options":{},"type":"markdown"},"livereload":{},"baidu-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://hm.baidu.com/hm.js"},"splitter":{},"google-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://www.googletagmanager.com/gtag/js"},"copyright":{"copyProtect":false,"site":"https://wukongnotnull.github.io/spring-boot-qingtong-wukongnote/","author":"悟空非空也","website":"悟空非空也","image":"https://tva1.sinaimg.cn/large/008i3skNgy1gu0dga76xrj61bi0hcgnn02.jpg"},"accordion":{},"edit-link-plus":{"label":"编辑本页","base":"https://github.com/WuKongNotNull/spring-boot-qingtong-wukongnote/blob/main/"},"readmore":{"blogId":"27424-1628224972145-104","name":"悟空非空也","qrcode":"http://wukongnotnull.cn/asset/weixin/weixin-QR-code.jpg","keyword":"wukong"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"anchor-navigation-ex-toc":{"associatedWithSummary":true,"float":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":true},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"donate":{"alipay":"https://tva1.sinaimg.cn/large/008i3skNgy1gu0dh56y7dj60p00kkmyt02.jpg","alipayText":"支付宝","button":"赞 👍 赏","title":"","wechat":"https://tva1.sinaimg.cn/large/008i3skNgy1gu0dhhyn9qj60yi0spq5402.jpg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"asset/wukong-favicon.ico"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']",".copyright"]},"fontsettings":{"theme":"white","family":"sans","size":2},"audio_image":{},"sectionx":{},"highlight":{},"mermaid-gb3":{},"insert-logo-link-website":{"link":"/index.html","style":"height: 100px","target":"_self","url":"https://tva1.sinaimg.cn/large/008i3skNgy1gu0djyg2dwj608w085weu02.jpg"},"icp":{"link":"http://www.beian.miit.gov.cn/","style":{},"number":"苏ICP备2021034291号"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"WuKongNotNull","repo":"spring-boot-qingtong-wukongnote","type":"star","size":"small"}]},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"autoFit":true,"linkShape":"diagonal","preset":"colorful","style":{},"type":"markdown"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"悟空非空也","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"悟空非空也 - SpringBoot 青铜篇","language":"zh-hans","links":{"sidebar":{"科学上网":"https://github.com/WuKongNotNull/awesome-free-vpn","JetBrains 全家桶":"https://www.bilibili.com/read/cv11463068"}},"gitbook":"*","description":"悟空非空也宝藏集,个人博客 https://wukongnotnull.com/"},"file":{"path":"fore-end-separation/user-management.md","mtime":"2021-08-31T16:09:39.902Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-31T16:09:48.069Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
